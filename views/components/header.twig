@@ -1,0 +1,24 @@
+<header class="header bg--black spacing--vert-1 spacing--gutter">
+	{% block header %}
+
+			<a class="hdr-logo-link" href="/" rel="home" title="{{site.name}}"><i class="icon-logo"></i></a>
+			<nav id="nav-main" class="nav-main flex flex--justify-around" role="navigation">
+
+					{% for item in menu.get_items %}
+						<li class="nav-item {{item.classes | join(' ')}}">
+							<a class="nav-link text--uppercase text--clean color--white font--bold" href="{{item.get_link}}">{{item.title}}</a>
+							{% if item.get_children %}
+								<ul class="nav nav-drop">
+									{% for child in item.get_children %}
+										<li class="nav-drop-item">
+											<a class="nav-link" href="{{child.get_link}}">{{child.title}}</a>
+										</li>
+									{% endfor %}
+								</ul>
+							{% endif %}
+						</li>
+					{% endfor %}
+
+				</nav><!-- #nav -->
+		{% endblock %}
+	</header>
