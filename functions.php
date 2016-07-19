@@ -38,6 +38,7 @@ class StarterSite extends TimberSite
         $context['assets'] = get_template_directory_uri() . '/assets';
         $context['hours'] = prepareRestaurantHours();
         $context['footer'] = prepareFooterFields();
+        $context['social'] = prepareSocialFields();
         return $context;
     }
     

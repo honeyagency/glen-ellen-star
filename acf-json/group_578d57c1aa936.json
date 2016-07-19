@@ -272,6 +272,80 @@
                     "disabled": 0
                 }
             ]
+        },
+        {
+            "key": "field_578e6b8a60efe",
+            "label": "Social",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_578e6b9260eff",
+            "label": "Facebook URL",
+            "name": "facebook_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_578e6b9d60f00",
+            "label": "Twitter Handle",
+            "name": "twitter_handle",
+            "type": "text",
+            "instructions": "glenellenstar",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_578e6bb460f01",
+            "label": "Instagram Handle",
+            "name": "instagram_handle",
+            "type": "text",
+            "instructions": "glenellenstar",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
         }
     ],
     "location": [
@@ -291,5 +365,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1468883500
+    "modified": 1468951867
 }

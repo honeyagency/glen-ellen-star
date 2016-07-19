@@ -46,3 +46,13 @@ function prepareFooterFields()
         'footer_address'       => get_field('field_578d582810b37', 'option'));
     return $section;
 }
+
+function prepareSocialFields()
+{
+    $section = array(
+        'facebook'  => get_field('field_578e6b9260eff', 'option'),
+        'twitter'   => get_field('field_578e6b9d60f00', 'option'),
+        'instagram' => get_field('field_578e6bb460f01', 'option'),
+    );
+    return $section;
+}
