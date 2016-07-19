@@ -14,14 +14,11 @@
 				{% block content %}
 					Sorry, no content
 				{% endblock %}
-			{% if sidebar %}
-				<aside class="layout-sidebar">
-					{{sidebar}}
-				</aside>
-			{% endif %}
+				
 		</main>
 		{% block footer %}
-			<footer id="footer">
+			<footer id="footer" class="bg--black color--cream spacing--gutter spacing--vert-1">
+
 				{% include 'footer.twig' %}
 			</footer>
 			{{ function('wp_footer') }}

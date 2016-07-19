@@ -1,5 +1,6 @@
 <?php
 /**
+ * Template Name: Sidebar
  * The template for displaying all pages.
  *
  * This is the template that displays all pages by default.
@@ -23,6 +24,6 @@
 
 $context = Timber::get_context();
 $post = new TimberPost();
+$context['sidebar'] = prepareSidebarPageFields();
 $context['post'] = $post;
-
-Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );
+Timber::render( array( 'page-sidebar.twig' ), $context );

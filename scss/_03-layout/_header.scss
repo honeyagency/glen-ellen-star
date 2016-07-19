@@ -1,4 +1,18 @@
-.icon-logo{
-	@include span-columns(2 of 12);
-	height: 1.2em;
+header {
+    @include row;
+}
+
+.hdr-logo-link {
+    width: 30%;
+    height: 2.2em;
+    display: inline-block;
+}
+
+.icon-logo {
+    width: 11em;
+    height: 1.2em;
+    display: block;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
 }
