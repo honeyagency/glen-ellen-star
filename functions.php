@@ -36,6 +36,8 @@ class StarterSite extends TimberSite
         $context['menu'] = new TimberMenu();
         $context['site'] = $this;
         $context['assets'] = get_template_directory_uri() . '/assets';
+        $context['hours'] = prepareRestaurantHours();
+        $context['footer'] = prepareFooterFields();
         return $context;
     }
     

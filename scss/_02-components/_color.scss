@@ -1,0 +1,9 @@
+.color--white{
+	color:white;
+}
+.color--cream{
+	color:map-get($cream, main);
+}
+.color--red{
+	color: map-get($red, main);
+}

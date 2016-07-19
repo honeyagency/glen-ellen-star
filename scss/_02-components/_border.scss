@@ -1,0 +1,7 @@
+.border--thick{
+	border:5px solid ;
+	border-color: inherit;
+}
+.border--red{
+	border-color: map-get($red, main);
+}

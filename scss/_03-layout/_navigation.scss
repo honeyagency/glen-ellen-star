@@ -1,1 +1,11 @@
-nav {}
+nav {
+    li {
+        list-style-type: none;
+        align-self:center;
+    }
+
+    // @include span-columns(8 of 12);
+    // float: right;
+    width: 65%;
+    
+}
