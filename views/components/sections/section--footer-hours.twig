@@ -1,9 +1,10 @@
-<section class="hours">
+<section class="section--footer-hours">
+	<strong class="text--uppercase">Hours</strong><br>
 	<div>SUN - THU: {{hours.sun_open}} - {{hours.sun_close}}</div>
 	<div>FRI &amp; SAT: {{hours.fri_open}} - {{hours.fri_close}}</div>
 	{% if hours.other_times != null %}
 		{% for time in hours.other_times  %}
-			<span class="day">{{time.day}}:</span>
+			<span class="day">{{time.day|date("M d")}}:</span>
 			<span class="color--red">{{time.text}}</span>
 		{% endfor %}
 	{% endif %}

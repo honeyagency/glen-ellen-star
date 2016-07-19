@@ -1,1 +1,9 @@
-footer{}
+footer {
+    @include row;
+
+    section {
+        // @include shift(0.33);
+
+        @include span-columns(3 of 12);
+    }
+}

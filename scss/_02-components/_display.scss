@@ -5,6 +5,18 @@
 .flex--justify-around {
     justify-content: space-around;
 }
+
 .flex--justify-between {
     justify-content: space-between;
+}
+
+.float--right {
+    float: right;
+}
+
+.float--left {
+    float: left;
+}
+.row{
+	@include row;
 }

@@ -1,9 +1,12 @@
 .block--social-icons {
+	display: inline-block;
     a {
         i {
-            width: 2em;
-            height: 2em;
+            width: 1.3em;
+            height: 1.3em;
             display: inline-block;
+            background-position: center;
+            background-size: contain;
         }
     }
 }

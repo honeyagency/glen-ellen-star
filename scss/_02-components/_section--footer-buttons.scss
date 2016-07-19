@@ -1,0 +1,6 @@
+.section--footer-buttons{
+	@include span-columns(2 of 12);
+	a{
+		display: block;
+	}
+}
