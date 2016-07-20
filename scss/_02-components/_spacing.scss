@@ -37,8 +37,9 @@ padding-right: 1em;
 padding-left:1em;
 @include media($screen-xs){}
 @include media($screen-sm){}
-@include media($screen-md){	padding-left:4.5em;
-	padding-right:4.5em;}
+@include media($screen-md){
+	padding-left:2em;
+	padding-right:2em;}
 @include media($screen-lg){}
 @include media($screen-xl){}
 }

@@ -1,18 +1,34 @@
 header {
-    @include row;
+    align-items: center;
 }
 
 .hdr-logo-link {
-    width: 30%;
-    height: 2.2em;
+    width: 60%;
+
+    @include media($screen-sm) {
+        width: 30%;
+    }
+
+
+    height: 1.5em;
     display: inline-block;
+    background-position: left center;
+
+    @include media($screen-md) {
+        width: 18%;
+    }
+
+
+    @include media($screen-lg) {
+        width: 20%;
+    }
 }
 
-.icon-logo {
-    width: 11em;
-    height: 1.2em;
-    display: block;
-    top: 50%;
-    position: relative;
-    transform: translateY(-50%);
-}
+// .icon-logo {
+//     width: 11em;
+//     height: 1.2em;
+//     display: block;
+//     top: 50%;
+//     position: relative;
+//     transform: translateY(-50%);
+// }

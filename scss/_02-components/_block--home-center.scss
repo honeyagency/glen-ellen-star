@@ -1,0 +1,10 @@
+.block--home-center {
+    top: 50%;
+    position: relative;
+    z-index: 2;
+    transform: translateY(-50%);
+
+    h1 {
+        text-shadow: 0 2px 3px transparentize(map-get($black, main), .7);
+    }
+}

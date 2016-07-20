@@ -9,7 +9,7 @@
 	<body class="{{body_class}} bg--cream" data-template="base.twig">
 		
 {% include 'components/header.twig' %}
-		<main id="content" role="main" class="spacing--gutter spacing--vert-1">
+		<main id="main-{{post.ID}}" role="main" class="">
 			{% if title %}<h1>{{title}}</h1>{% endif %}
 				{% block content %}
 					Sorry, no content

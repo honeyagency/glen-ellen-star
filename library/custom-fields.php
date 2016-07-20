@@ -56,3 +56,19 @@ function prepareSocialFields()
     );
     return $section;
 }
+
+function prepareHomepageFields()
+{
+    $video = array(
+        'ogg'  => get_field('field_578ea17438012'),
+        'mp4'  => get_field('field_578ea18938013'),
+        'webm' => get_field('field_578ea1a038014'),
+    );
+    $section = array(
+        'text'     => get_field('field_578eabf3676c8'),
+        'cta_text' => get_field('field_578eabf7676c9'),
+        'cta_url'  => get_field('field_578eac12676ca'),
+        'video'    => $video,
+    );
+    return $section;
+}

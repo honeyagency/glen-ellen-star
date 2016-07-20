@@ -1,11 +1,55 @@
 nav {
-    li {
-        list-style-type: none;
-        align-self:center;
+    // Hidden, will slide in when you add ".open"
+    width: 75%;
+    z-index: 99;
+    justify-content: space-between;
+
+
+    // specific for mobile (needs to be overwritten)
+
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -130vw;
+    align-items: center;
+    padding-top: 6em;
+
+    // opened up
+    &.open {
+        transition: right .3s ease-in-out;
+        right: 0;
+        box-shadow: -10px 0px 40px transparentize(map-get($black, main), 0.6);
     }
 
-    // @include span-columns(8 of 12);
-    // float: right;
-    width: 65%;
-    
+    li {
+        list-style-type: none;
+        text-align: center;
+
+        a {
+            font-size: 1rem !important;
+        }
+
+        // specific for mobile (needs to be overwritten)
+        width: 100%;
+    }
+
+    @include media($screen-md) {
+        position: relative;
+        flex-direction: row !important;
+        padding-top: 0;
+        right: 0;
+
+        li {
+            align-self: center;
+            width: auto;
+
+            @include media(max-width $screen-md-max) {
+                a {
+                    font-size: .9rem !important;
+                }
+            }
+        }
+    }
 }

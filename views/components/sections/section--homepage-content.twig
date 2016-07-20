@@ -1,0 +1,5 @@
+<div class="block--home-center text--center">
+	{% if home.text != null %}<h1 class="color--white">{{home.text}}</h1>{% endif %}
+	{% if home.cta_url != null %}<a class="button color--white bg--red border--red" title="{{home.cta_text}}" href="{{home.cta_url}}">{{home.cta_text}}</a>{% endif %}
+</div>
+{% include 'components/sections/section--homepage-video.twig' %}

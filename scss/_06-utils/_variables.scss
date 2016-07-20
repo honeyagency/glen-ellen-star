@@ -52,6 +52,7 @@ $screen-xl:                  map-get($max-width, xl) !default;
 $screen-xs-max:              ($screen-sm - 1) !default;
 $screen-sm-max:              ($screen-md - 1) !default;
 $screen-md-max:              ($screen-lg - 1) !default;
+$screen-lg-max:              ($screen-xl - 1) !default;
 
 $large-screen:  new-breakpoint(max-width 1200px 12);
 $medium-screen: new-breakpoint(max-width  992px 12);

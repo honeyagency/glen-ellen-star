@@ -1,0 +1,11 @@
+.section--homepage-video {
+    min-width: 100%;
+    position: relative;
+    z-index: -1;
+    top: -20vh;
+    min-height: 85vh;
+
+    @media screen and (max-height: 600px) {
+        top: -25vh;
+    }
+}
