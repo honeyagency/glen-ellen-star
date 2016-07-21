@@ -27,6 +27,8 @@ $context['post'] = $post;
 
 if (is_front_page() == true) {
     $context['home'] = prepareHomepageFields();
+} elseif (is_page(44)) {
+    $context['menus'] = prepareMenuPageFields();
 }
 
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);

@@ -1,6 +1,6 @@
 .flex {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
 .flex--justify-around {
@@ -11,6 +11,22 @@
     justify-content: space-between;
 }
 
+.flex-column {
+    flex-direction: column;
+}
+
+.justify--center {
+    justify-content: center;
+}
+
+.align--center {
+    align-items: center;
+}
+
+.content-center {
+    align-content: center;
+}
+
 .float--right {
     float: right;
 }
@@ -18,6 +34,35 @@
 .float--left {
     float: left;
 }
-.row{
-	@include row;
+
+.row {
+    @include row;
+}
+
+.block {
+    display: block;
+}
+
+.flex--grid-half {
+    width: 100%;
+    flex-basis: 100%;
+    margin-top: 5%;
+
+    @include media($screen-xs) {}
+
+
+    @include media($screen-sm) { width: 48%;
+        margin-top: 2%;
+        flex-basis: 48%;}
+
+
+    @include media($screen-md) {
+       
+    }
+
+
+    @include media($screen-lg) {}
+
+
+    @include media($screen-xl) {}
 }

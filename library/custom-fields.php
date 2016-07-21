@@ -72,3 +72,18 @@ function prepareHomepageFields()
     );
     return $section;
 }
+
+function prepareMenuPageFields()
+{
+
+    if (have_rows('field_57913a2ebe615')) {
+        while (have_rows('field_57913a2ebe615')) {
+            the_row();
+            $image  = new TimberImage(get_sub_field('field_57913a3ebe617'));
+            $menu[] = array(
+                'title' => get_sub_field('field_57913a35be616'),
+                'image' => $image,
+                'file'  => get_sub_field('field_57913a4cbe618'));
+        }}
+    return $menu;
+}

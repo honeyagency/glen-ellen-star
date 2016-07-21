@@ -28,6 +28,13 @@
 .spacing--dsk-horiz-5 {@include media( $screen-sm ){padding-left:(5 * $spacing-unit);padding-right:(5 * $spacing-unit);};}
 .spacing--dsk-horiz-6 {@include media( $screen-sm ){padding-left:(6 * $spacing-unit);padding-right:(6 * $spacing-unit);};}
 
+.mar-no{
+	margin:0;
+}
+.line-no{
+	line-height: 0;
+}
+
 .spacing--bot-6{
 	padding-bottom: 6em;
 }
