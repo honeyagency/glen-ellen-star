@@ -4,7 +4,7 @@
 		{% include 'components/sections/section--homepage-content.twig' %}
 	{% endif %}
 	<article class="post-type-menus spacing--gutter spacing--dsk-horiz-4 spacing--dsk-vert-2" id="post-{{post.ID}}">
-		<section class="flex justify-around flex--justify-around">
+		<section class="flex justify-around flex--justify-around section--menus">
 				{% for menus in menus %}
 					<a target="_blank" href="{{menus.file}}" class="flex justify--center align--center flex--grid-half spacing--vert-6 spacing--horiz-4" style="background-image:url('{{menus.image}}');"><h1 class="color--white mar-no text--uppercase text--center">{{menus.title}}</h1></a>
 				{% endfor %}

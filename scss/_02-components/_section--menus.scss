@@ -1,0 +1,19 @@
+.section--menus {
+    a {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        h1 {
+            position: relative;
+            text-shadow: 0 2px 3px transparentize(map-get($black, main), 0.5);
+
+        }
+
+        &:hover {
+            h1 {
+
+            }
+        }
+    }
+}
