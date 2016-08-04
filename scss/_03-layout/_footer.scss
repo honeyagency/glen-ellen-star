@@ -1,13 +1,17 @@
 footer {
     @include row;
-clear: both;
-    section {
-        // @include shift(0.33);
 
-    @include media($screen-xs){}
-    @include media($screen-sm){    @include span-columns(3 of 12);}
-    @include media($screen-md){}
-    @include media($screen-lg){}
-    @include media($screen-xl){}
+    clear: both;
+
+    section {
+        @include media($screen-sm) {
+            @include span-columns(3 of 12);
+        }
+    }
+    .section--footer-copy{
+    	width: 100%;
+    	display: block;
+    	text-align: center;
+    	clear: both;
     }
 }

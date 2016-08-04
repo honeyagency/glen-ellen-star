@@ -5,9 +5,21 @@
 	{% endif %}
 	<article class="post-type-menus spacing--gutter spacing--dsk-horiz-4 spacing--dsk-vert-2" id="post-{{post.ID}}">
 		<section class="flex justify-around flex--justify-around section--menus">
-				{% for menus in menus %}
-					<a target="_blank" href="{{menus.file}}" class="flex justify--center align--center flex--grid-half spacing--vert-6 spacing--horiz-4" style="background-image:url('{{menus.image}}');"><h1 class="color--white mar-no text--uppercase text--center">{{menus.title}}</h1></a>
-				{% endfor %}
+			{% for menus in menus.menu %}
+				<a target="_blank" href="{{menus.file}}" class="flex justify--center align--center flex--grid-half spacing--vert-6 spacing--horiz-4" style="background-image:url('{{menus.image}}');"><h1 class="color--white mar-no text--uppercase text--center">{{menus.title}}</h1></a>
+			{% endfor %}
 		</section>
+		{% if menus.link %}
+			<section class="post-type-{{post.post_type}} spacing--horiz-1 spacing--vert-1 spacing--dsk-vert-3" id="post-{{post.ID}}">
+			<a href="{{menus.link}}" title="{{menus.text}}" class="button color--red border--thick center">{{menus.text}}</a>
+			</section>
+		{% endif %}
+		
+		
+		{% if post.content %}
+			<section class="post-type-{{post.post_type}} spacing--horiz-1 spacing--vert-1" id="post-{{post.ID}}">
+				{{post.content}}
+			</section>
+		{% endif %}
 	</article>
 {% endblock %}

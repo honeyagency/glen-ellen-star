@@ -1,24 +1,26 @@
-<header class="header bg--black spacing--vert-1 spacing--gutter flex flex--justify-between">
+<header class="header bg--black spacing--vert-1 spacing--gutter flex flex--justify-between {% if post.post_name == 'menu' %}bg--transparent{% endif %} {% if post._wp_page_template == 'page-sidebar.php' and post.get_thumbnail.src %}bg--image{% endif %}"
+	{% if post._wp_page_template == 'page-sidebar.php' %}
+		style="background-image:url('{{post.get_thumbnail.src|resize(1200)}}');"
+	{% endif %}
+	>
 	{% block header %}
-
-			<a class="hdr-logo-link icon-logo" href="/" rel="home" title="{{site.name}}"></a>
-			<a href="javascript:void(0);" class="trigger--nav-mobile" id="trigger--nav-mobile"></a>
-			<nav id="nav-main" class="nav-main flex bg--black" role="navigation">
-					{% for item in menu.get_items %}
-						<li class="nav-item {{item.classes | join(' ')}}">
-							<a class="nav-link font--smaller text--uppercase text--clean color--white font--normal" href="{{item.get_link}}">{{item.title}}</a>
-							{% if item.get_children %}
-								<ul class="nav nav-drop">
-									{% for child in item.get_children %}
-										<li class="nav-drop-item">
-											<a class="nav-link" href="{{child.get_link}}">{{child.title}}</a>
-										</li>
-									{% endfor %}
-								</ul>
-							{% endif %}
-						</li>
-					{% endfor %}
-
-				</nav><!-- #nav -->
+		<a class="hdr-logo-link icon-logo" data-grunticon-embed href="/" rel="home" title="{{site.name}}"></a>
+		<a href="javascript:void(0);" class="trigger--nav-mobile" id="trigger--nav-mobile"></a>
+		<nav id="nav-main" class="nav-main flex" role="navigation">
+			{% for item in menu.get_items %}
+				<li class="nav-item {{item.classes | join(' ')}}">
+					<a class="nav-link font--smaller text--uppercase text--clean color--white font--normal" href="{{item.get_link}}">{{item.title}}</a>
+					{% if item.get_children %}
+						<ul class="nav nav-drop">
+							{% for child in item.get_children %}
+								<li class="nav-drop-item">
+									<a class="nav-link" href="{{child.get_link}}">{{child.title}}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				</li>
+			{% endfor %}
+			</nav><!-- #nav -->
 		{% endblock %}
 	</header>

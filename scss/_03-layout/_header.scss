@@ -1,5 +1,11 @@
 header {
     align-items: center;
+     &.bg--image {
+        padding-bottom: 20em;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
 .hdr-logo-link {
@@ -22,6 +28,9 @@ header {
     @include media($screen-lg) {
         width: 20%;
     }
+
+
+
 }
 
 // .icon-logo {

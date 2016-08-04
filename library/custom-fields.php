@@ -85,5 +85,10 @@ function prepareMenuPageFields()
                 'image' => $image,
                 'file'  => get_sub_field('field_57913a4cbe618'));
         }}
-    return $menu;
+    $section = array(
+        'menu' => $menu,
+        'link' => get_field('field_57a378dc0fb84'),
+        'text' => get_field('field_57a378e80fb85'),
+    );
+    return $section;
 }

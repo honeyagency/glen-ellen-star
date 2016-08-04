@@ -13,6 +13,7 @@
 .spacing--horiz-5 {padding-left:(5 * $spacing-unit);padding-right:(5 * $spacing-unit);}
 .spacing--horiz-6 {padding-left:(6 * $spacing-unit);padding-right:(6 * $spacing-unit);}
 
+.spacing--dsk-vert-0 {@include media( $screen-sm ){padding-top:0;padding-bottom:0;};}
 .spacing--dsk-vert-1 {@include media( $screen-sm ){padding-top:(1 * $spacing-unit);padding-bottom:(1 * $spacing-unit);};}
 .spacing--dsk-vert-2 {@include media( $screen-sm ){padding-top:(2 * $spacing-unit);padding-bottom:(2 * $spacing-unit);};}
 .spacing--dsk-vert-3 {@include media( $screen-sm ){padding-top:(3 * $spacing-unit);padding-bottom:(3 * $spacing-unit);};}
@@ -21,6 +22,7 @@
 .spacing--dsk-vert-6 {@include media( $screen-sm ){padding-top:(6 * $spacing-unit);padding-bottom:(6 * $spacing-unit);};}
 
 
+.spacing--dsk-horiz-0 {@include media( $screen-sm ){padding-left:0;padding-left:0;};}
 .spacing--dsk-horiz-1 {@include media( $screen-sm ){padding-left:(1 * $spacing-unit);padding-right:(1 * $spacing-unit);};}
 .spacing--dsk-horiz-2 {@include media( $screen-sm ){padding-left:(2 * $spacing-unit);padding-right:(2 * $spacing-unit);};}
 .spacing--dsk-horiz-3 {@include media( $screen-sm ){padding-left:(3 * $spacing-unit);padding-right:(3 * $spacing-unit);};}

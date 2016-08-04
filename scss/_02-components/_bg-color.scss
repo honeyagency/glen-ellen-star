@@ -1,9 +1,38 @@
-.bg--black{
-	background-color: map-get($black, main);
+.bg--black {
+    background-color: map-get($black, main);
 }
-.bg--cream{
-	background-color: map-get($cream, main);
+
+.bg--cream {
+    background-color: map-get($cream, main);
 }
-.bg--red{
-	background-color: map-get($red, main);
+
+.bg--red {
+    background-color: map-get($red, main);
+}
+
+.bg--transparent {
+    background-color: transparent;
+    color: map-get($black, main);
+
+    nav {
+        li {
+            &.button {
+                a {
+                    color: white;
+                }
+            }
+
+            a {
+                color: map-get($black, main);
+            }
+        }
+    }
+
+    .icon-logo {
+        svg {
+            .cls-3 {
+                fill: map-get($black, main);
+            }
+        }
+    }
 }

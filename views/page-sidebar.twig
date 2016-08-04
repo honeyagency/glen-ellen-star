@@ -1,7 +1,7 @@
 {% extends "base.twig" %}
 {% block content %}
 
-	<article class="post-type-{{post.post_type}} spacing--horiz-4 spacing--vert-3" id="post-{{post.ID}}">
+	<article class="post-type-{{post.post_type}} spacing--horiz-1 spacing--vert-1 spacing--dsk-horiz-4 spacing--dsk-vert-3" id="post-{{post.ID}}">
 		<section class="article-content">
 			<h1 class="article-h1">{{post.title}}</h1>
 			<div class="article-body">
@@ -9,9 +9,9 @@
 			</div>
 		</section>
 	</article>
-	<aside class="post-type-{{post.post_type}} spacing--vert-3">
+	<aside class="post-type-{{post.post_type}} spacing--horiz-1 spacing--vert-1 spacing--dsk-vert-3">
 		{% for image in sidebar %}
-			<img src="{{image}}">
+			<a href="{{image}}" target="_blank" title="View Full Image"><img src="{{image|resize(600)}}" alt="{{image.post_title}}"></a>
 		{% endfor %}
 
 </div>

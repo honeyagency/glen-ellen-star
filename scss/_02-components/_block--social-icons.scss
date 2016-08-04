@@ -1,12 +1,72 @@
 .block--social-icons {
-	display: inline-block;
+    @include shift(3);
+
+    @include span-columns(6 of 12);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
     a {
         i {
-            width: 1.3em;
-            height: 1.3em;
+            width: 2.5em;
+            height: 2.5em;
             display: inline-block;
             background-position: center;
             background-size: contain;
         }
+    }
+
+    @include media($screen-sm) {
+        @include shift(2);
+
+        @include span-columns(8 of 12);
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        a {
+            i {
+                width: 2em;
+                height: 2em;
+            }
+        }
+    }
+
+
+    @include media($screen-md) {
+        @include shift(0);
+
+        @include span-columns(4 of 12);
+
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        a {
+            i {
+                width: 1.3em;
+                height: 1.3em;
+            }
+        }
+    }
+}
+
+.footer--connected {
+    @include span-columns(12 of 12);
+
+    @include media($screen-sm) {
+        padding: .5em 0;
+    }
+
+
+    @include media($screen-md) {
+        font-size: 1rem;
+
+        @include span-columns(8 of 12);
+
+        text-align: right;
     }
 }

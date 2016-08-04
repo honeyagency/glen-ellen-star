@@ -1,6 +1,10 @@
-.section--footer-buttons{
-	@include span-columns(2 of 12);
-	a{
-		display: block;
-	}
+.section--footer-buttons {
+    @include media($screen-sm) {
+        @include span-columns(2 of 12);
+    }
+
+
+    a {
+        display: block;
+    }
 }

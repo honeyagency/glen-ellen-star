@@ -9,12 +9,13 @@ nav {
 
     justify-content: space-between;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     right: -130vw;
     align-items: center;
     padding-top: 6em;
+    background-color: map-get($black, main);
 
     // opened up
     &.open {
@@ -40,6 +41,7 @@ nav {
         flex-direction: row !important;
         padding-top: 0;
         right: 0;
+        background-color: transparent;
 
         li {
             align-self: center;
