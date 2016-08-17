@@ -4,7 +4,6 @@ nav {
     z-index: 99;
     justify-content: space-between;
 
-
     // specific for mobile (needs to be overwritten)
 
     justify-content: space-between;
@@ -29,11 +28,18 @@ nav {
         text-align: center;
 
         a {
+            letter-spacing: 1.2px;
             font-size: 1rem !important;
         }
 
         // specific for mobile (needs to be overwritten)
         width: 100%;
+
+        &.button {
+            a {
+                text-transform: none !important;
+            }
+        }
     }
 
     @include media($screen-md) {
@@ -51,6 +57,20 @@ nav {
                 a {
                     font-size: .9rem !important;
                 }
+            }
+
+
+            &.button {
+                padding: .3em 1em;
+            }
+        }
+    } 
+
+
+    @include media(max-width $screen-sm-max) {
+        li {
+            &.button {
+                padding: 2em;
             }
         }
     }

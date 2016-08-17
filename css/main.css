@@ -1,205 +1,66 @@
-html {
-  box-sizing: border-box; }
+/*
+Error: Invalid CSS after "...dia($screen-xs)": expected "}", was "font-size: .9rem;}"
+        on line 18 of /Users/josh/web/glenellenstar/wp-content/themes/glen-ellen-star/scss/_03-layout/_footer.scss
+        from line 18 of /Users/josh/web/glenellenstar/wp-content/themes/glen-ellen-star/scss/main.scss
 
-*, *::after, *::before {
-  box-sizing: inherit; }
+13:     	display: block;
+14:     	text-align: center;
+15:     	clear: both;
+16:     }
+17:     @include media($screen-xs)
+18: font-size: .9rem;}
+19:     @include media($screen-sm){}
+20:     @include media($screen-md){}
+21:     @include media($screen-lg){}
+22:     @include media($screen-xl){}
+23: }
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+Backtrace:
+/Users/josh/web/glenellenstar/wp-content/themes/glen-ellen-star/scss/_03-layout/_footer.scss:18
+/Users/josh/web/glenellenstar/wp-content/themes/glen-ellen-star/scss/main.scss:18
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1179:in `expected'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1115:in `expected'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1110:in `tok!'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:656:in `block'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:647:in `ruleset'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:673:in `block_child'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:663:in `block_contents'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:123:in `stylesheet'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:39:in `parse'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/engine.rb:403:in `_to_tree'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/engine.rb:309:in `to_tree'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:324:in `block in visit_import'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:88:in `block in with_import'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:115:in `with_frame'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:88:in `with_import'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:115:in `with_frame'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `with_base'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `map'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/root_node.rb:20:in `render'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/engine.rb:278:in `render'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:423:in `run'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:52:in `parse'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:19:in `parse!'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/bin/scss:13:in `<main>'
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-body {
-  font-family: "Myriad Pro", sans-serif;
-  line-height: 1.6;
-  font-size: 1.2rem;
-  color: #353535; }
-  @media screen and (max-width: 991px) {
-    body {
-      font-size: 1.08rem; } }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Georgia", serif;
-  font-weight: 900; }
-  h1.section-title, h2.section-title, h3.section-title, h4.section-title, h5.section-title, h6.section-title {
-    line-height: 2.5; }
-
-h1, h2 {
-  line-height: 1.2; }
-
-h3, h4 {
-  line-height: 1.4; }
-
-h1 {
-  font-size: 2.4rem; }
-
-h2 {
-  font-size: 1.8rem; }
-
-h3 {
-  font-size: 1.56rem; }
-
-h4 {
-  font-size: 1.2rem; }
-
-h5 {
-  font-size: 1.2rem; }
-
-@media screen and (min-width: 768px) {
-  h1 {
-    font-size: 2.64rem; }
-
-  h2 {
-    font-size: 2.04rem; }
-
-  h3 {
-    font-size: 1.8rem; }
-
-  h4 {
-    font-size: 1.56rem; }
-
-  h5 {
-    font-size: 1.2rem; } }
-@media screen and (min-width: 992px) {
-  h1 {
-    font-size: 3rem; }
-
-  h2 {
-    font-size: 2.4rem; }
-
-  h3 {
-    font-size: 1.8rem; }
-
-  h4 {
-    font-size: 1.56rem; }
-
-  h5 {
-    font-size: 1.2rem; } }
-@media screen and (min-width: 1200px) {
-  h1 {
-    font-size: 4.8rem; }
-
-  h2 {
-    font-size: 3rem; }
-
-  h3 {
-    font-size: 2.4rem; }
-
-  h4 {
-    font-size: 2.16rem; }
-
-  h5 {
-    font-size: 1.56rem; } }
-em {
-  font-style: italic; }
-
-strong {
-  font-weight: 900; }
-
-ul {
-  list-style-type: square; }
-  ul li {
-    margin-left: 1.5em; }
-
-ol {
-  list-style: decimal; }
-
-.center {
-  text-align: center; }
-
-.featured time {
-  float: right; }
-.featured .deet-wrap {
-  margin-top: 0.5em; }
-.featured .title {
-  font-weight: 600;
-  width: 75%;
-  display: block;
-  float: left; }
-.featured .type {
-  font-weight: 400;
-  clear: both; }
-.featured.two {
-  float: left;
-  display: block;
-  margin-right: 2.3576515979%;
-  width: 91.4701957002%;
-  margin-left: 4.2649021499%;
-  margin-bottom: 1em; }
-  .featured.two:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 992px) {
-    .featured.two {
-      float: left;
-      display: block;
-      margin-right: 2.3576515979%;
-      width: 48.821174201%;
-      margin-left: 0%;
-      margin-bottom: 0; }
-      .featured.two:last-child {
-        margin-right: 0; } }
-.featured.three {
-  float: left;
-  display: block;
-  margin-right: 2.3576515979%;
-  width: 91.4701957002%;
-  margin-left: 4.2649021499%; }
-  .featured.three:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 992px) {
-    .featured.three {
-      float: left;
-      display: block;
-      margin-right: 2.3576515979%;
-      width: 31.7615656014%;
-      margin-left: 0%; }
-      .featured.three:last-child {
-        margin-right: 0; } }
-.featured img {
-  width: 100%; }
-
-.home-bg {
-  float: left;
-  width: 100%; }
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...dia($screen-xs)\": expected \"}\", was \"font-size: .9rem;}\"\A         on line 18 of /Users/josh/web/glenellenstar/wp-content/themes/glen-ellen-star/scss/_03-layout/_footer.scss\A         from line 18 of /Users/josh/web/glenellenstar/wp-content/themes/glen-ellen-star/scss/main.scss\A \A 13:     	display: block;\A 14:     	text-align: center;\A 15:     	clear: both;\A 16:     }\A 17:     @include media($screen-xs)\A 18: font-size: .9rem;}\A 19:     @include media($screen-sm){}\A 20:     @include media($screen-md){}\A 21:     @include media($screen-lg){}\A 22:     @include media($screen-xl){}\A 23: }"; }

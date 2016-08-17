@@ -51,18 +51,25 @@
     @include media($screen-xs) {}
 
 
-    @include media($screen-sm) { width: 48%;
+    @include media($screen-sm) {
+        width: 49%;
         margin-top: 2%;
-        flex-basis: 48%;}
-
-
-    @include media($screen-md) {
-       
+        flex-basis: 49%;
     }
+
+
+    @include media($screen-md) {}
 
 
     @include media($screen-lg) {}
 
 
     @include media($screen-xl) {}
+}
+
+.mobile-hide {
+    @include media(max-width $screen-md-max) {
+        display: none !important;
+        visibility: hidden !important;
+    }
 }

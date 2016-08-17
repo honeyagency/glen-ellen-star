@@ -1,9 +1,9 @@
-<section class="section--footer-buttons text--center text--uppercase">
+<section class="section--footer-buttons text--center color--cream">
 	{% if footer.first_button_url %}
-		<a href="{{footer.first_button_url}}" title="{{footer.first_button_text}}" class="button color--cream border--thick">{{footer.first_button_text}}</a>
+		<a href="{{footer.first_button_url}}" title="{{footer.first_button_text}}" class="text--uppercase font--heading button color--cream border--thick">{{footer.first_button_text}}</a>
 	{% endif %}
-	<br>
+
 	{% if footer.second_button_url %}
-		<a href="{{footer.second_button_url}}" title="{{footer.second_button_text}}" class="button color--white bg--red border--red border--thick">{{footer.second_button_text}}</a>
+		<a href="{{footer.second_button_url}}" title="{{footer.second_button_text}}" class="button color--white bg--red border--red border--thick font--heading text--uppercase">{{footer.second_button_text}}</a>
 	{% endif %}
 </section>

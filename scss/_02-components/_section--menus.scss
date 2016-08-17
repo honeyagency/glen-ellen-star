@@ -1,19 +1,24 @@
 .section--menus {
     a {
+        &:first-of-type {
+            flex-basis: 100%;
+
+            @include media($screen-sm) {
+                padding: 10em 0;
+            }
+        }
+
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
 
         h1 {
             position: relative;
-            text-shadow: 0 2px 3px transparentize(map-get($black, main), 0.5);
-
+            line-height: 1.1;
         }
 
         &:hover {
-            h1 {
-
-            }
+            h1 {}
         }
     }
 }

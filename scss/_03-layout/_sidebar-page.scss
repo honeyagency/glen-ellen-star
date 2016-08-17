@@ -1,11 +1,29 @@
 article.post-type-page {
     @include media($screen-xs) {
+        // @include shift(2 of 12);
+
+        max-width: 750px;
+
         @include span-columns(8 of 12);
+    }
+
+
+    @include media($screen-md) {
+        @include shift(0);
     }
 }
 
 aside.post-type-page {
-    @include media($screen-xs) {
+    @include media($screen-md) {
+        max-width: 350px;
+
         @include span-columns(3 of 12);
+    }
+}
+
+.page-template-page-sidebar {
+    main {
+        display: flex;
+        justify-content: center;
     }
 }

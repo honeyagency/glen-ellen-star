@@ -1,24 +1,41 @@
-.text--uppercase{
-	text-transform: uppercase;
+.text--uppercase {
+    text-transform: uppercase;
 }
-.text--clean{
-	text-decoration: none;
+
+.text--clean {
+    text-decoration: none;
 }
-.text--center{
-	text-align: center;
+
+.text--center {
+    text-align: center;
 }
-.text--right{
-	text-align: right;
+
+.text--right {
+    text-align: right;
 }
-.text--left{
-	text-align: left;
+
+.text--left {
+    text-align: left;
 }
-.font--bold{
-	font-weight: 600;
+
+.font--bold {
+    font-weight: 600;
 }
-.font--normal{
-	font-weight: 400;
+
+.font--normal {
+    font-weight: 400;
 }
-.font--smaller{
-	font-size: 1rem;
+
+.font--smaller {
+    font-size: 1rem;
+}
+
+.font--italic {
+    font-style: italic;
+}
+
+.font--heading {
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight !important;
+    letter-spacing: 1.2px;
 }

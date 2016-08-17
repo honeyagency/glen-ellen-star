@@ -1,10 +1,21 @@
 .button {
-    padding: .3em 1em;
-    font-family: $small-headings;
+    padding: 0.5em 1em;
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight !important;
+    letter-spacing: 1.2px;
     text-decoration: none;
+
+    a {
+        font-weight: $button-weight;
+    }
 
     &.center {
         margin: 0 auto;
         display: table;
+    }
+
+    &.nav-item, &.home--cta {
+        font-family: $small-headings;
+        font-weight: $button-weight;
     }
 }
