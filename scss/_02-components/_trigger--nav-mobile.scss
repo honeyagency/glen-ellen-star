@@ -1,7 +1,8 @@
 .trigger--nav-mobile {
-    height: 22px;
+    height: 25px;
     width: 30px;
-    border-top: 2px solid white;
+
+    // border-top: 2px solid white;
     border-bottom: 2px solid white;
     z-index: 999;
     position: relative;
@@ -10,19 +11,35 @@
     &:before {
         width: 100%;
         border-top: 2px solid white;
-        top: 50%;
         position: relative;
-        transform: translateY(-50%);
+        transform: translateY(-3px);
         content: '';
         display: block;
-        transition: opacity .2s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+
+    &:after {
+        width: 100%;
+        border-top: 2px solid white;
+        top: 8px;
+        position: relative;
+        content: '';
+        display: block;
+        transition: all .3s ease-in-out;
     }
 
     &.open {
-        transform: rotate(45deg);
-
+        border-color: transparent;
+        transition:border-color .2s ease-in-out;
         &:before {
-            opacity: 0;
+            transform: translateY(10px) rotate(45deg);
+            transition: all .3s ease-in-out;
+        }
+
+        &:after {
+            transition: all .3s ease-in-out;
+            transform: rotate(-45deg);
+
         }
     }
 
