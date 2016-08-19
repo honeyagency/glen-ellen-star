@@ -1,8 +1,10 @@
-<footer id="footer" class="bg--black color--cream spacing--gutter spacing--vert-3">
-	{% include 'components/sections/section--footer-buttons.twig' %}
-	{% include 'components/sections/section--footer-address.twig' %}
-	{% include 'components/sections/section--footer-hours.twig' %}
-	{% include 'components/sections/section--footer-contact.twig' %}
-	<br><br><div class="section--footer-copy color--cream">Copyright {{"now"|date('Y')}}</div>
+<footer id="footer" class="bg--black color--cream-dark letter-one spacing--gutter spacing--vert-5">
+	<div class="max-wrap footer-wrap">
+		{% include 'components/sections/section--footer-buttons.twig' %}
+		{% include 'components/sections/section--footer-address.twig' %}
+		{% include 'components/sections/section--footer-hours.twig' %}
+		{% include 'components/sections/section--footer-contact.twig' %}
+		<div class="section--footer-copy block text--uppercase font--smaller spacing--top-3">{{footer.footer_bottom}}</div>
+	</div>
 </footer>
 {{ function('wp_footer') }}

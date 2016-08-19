@@ -27,7 +27,7 @@
 }
 
 .font--smaller {
-    font-size: 1rem;
+    font-size: .9rem;
 }
 
 .font--italic {
@@ -38,4 +38,7 @@
     font-family: $heading-font-family;
     font-weight: $heading-font-weight !important;
     letter-spacing: 1.2px;
+}
+.letter-one{
+    letter-spacing: 1px;
 }

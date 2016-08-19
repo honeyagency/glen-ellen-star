@@ -33,7 +33,7 @@
 
 .spacing--top-3{
 	padding-top: (3 * $spacing-unit);
-	padding-bottom: (3 * $spacing-unit);
+
 }
 .mar-no{
 	margin:0;
@@ -49,11 +49,18 @@
 
 padding-right: 1em;
 padding-left:1em;
-@include media($screen-xs){}
-@include media($screen-sm){}
-@include media($screen-md){
+
+@include media($screen-md) {
 	padding-left:2em;
-	padding-right:2em;}
-@include media($screen-lg){}
-@include media($screen-xl){}
+	padding-right:2em;
+}
+@include media($screen-lg) {
+	padding-left: 3em;
+	padding-right: 3em;
+}
+
+}
+.max-wrap{
+	max-width: 1300px;
+	margin: 0 auto;
 }

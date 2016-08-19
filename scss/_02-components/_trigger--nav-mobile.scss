@@ -1,11 +1,12 @@
 .trigger--nav-mobile {
-    height:22px;
+    height: 22px;
     width: 30px;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     z-index: 999;
     position: relative;
-transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+
     &:before {
         width: 100%;
         border-top: 2px solid white;
@@ -16,19 +17,18 @@ transition: transform .2s ease-in-out;
         display: block;
         transition: opacity .2s ease-in-out;
     }
-    &.open{
-    	transform: rotate(45deg);
-    	
-    	&:before{
-    		opacity: 0;
-    	}	
+
+    &.open {
+        transform: rotate(45deg);
+
+        &:before {
+            opacity: 0;
+        }
     }
-    // &:after {
-    //   content: '';
-    //   display: block;
-    // }
 
     @include media($screen-md) {
-        display: none;
+        &.not-home {
+            display: none;
+        }
     }
 }

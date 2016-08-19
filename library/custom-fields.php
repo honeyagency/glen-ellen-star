@@ -43,7 +43,8 @@ function prepareFooterFields()
         'second_button_url'    => get_field('field_578d57fcf5142', 'option'),
         'second_button_text'   => get_field('field_578d5801f5143', 'option'),
         'footer_address_title' => get_field('field_578d583210b38', 'option'),
-        'footer_address'       => get_field('field_578d582810b37', 'option'));
+        'footer_address'       => get_field('field_578d582810b37', 'option'),
+        'footer_bottom'       => get_field('field_57b74298534c9', 'option'));
     return $section;
 }
 

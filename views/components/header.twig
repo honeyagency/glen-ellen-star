@@ -1,12 +1,12 @@
-<header class="header bg--black spacing--vert-1 spacing--gutter flex flex--justify-between {% if post.post_name == 'menu' %}bg--transparent{% endif %} {% if post._wp_page_template == 'page-sidebar.php' and post.get_thumbnail.src %}bg--image{% endif %}"
+<header class="header bg--black {{post.post_name}} spacing--vert-1 spacing--dsk-vert-2 spacing--gutter flex flex--justify-between {% if post.post_name == 'menu' %}bg--transparent{% endif %} {% if post._wp_page_template == 'page-sidebar.php' and post.get_thumbnail.src %}bg--image{% endif %}"
 	{% if post._wp_page_template == 'page-sidebar.php' %}
 		style="background-image:url('{{post.get_thumbnail.src|resize(1200)}}');"
 	{% endif %}
 	>
 	{% block header %}
 		<a class="hdr-logo-link icon-logo" data-grunticon-embed href="/" rel="home" title="{{site.name}}"></a>
-		<a href="javascript:void(0);" class="trigger--nav-mobile" id="trigger--nav-mobile"></a>
-		<nav id="nav-main" class="nav-main flex" role="navigation">
+		<a href="javascript:void(0);" class="trigger--nav-mobile {% if post.post_name != 'home' %}not-home{% endif %}" id="trigger--nav-mobile"></a>
+		<nav id="nav-main" class="nav-main flex {% if post.post_name != 'home' %}not-home{% endif %}" role="navigation">
 			{% for item in menu.get_items %}
 				<li class="nav-item {{item.classes | join(' ')}}">
 					<a class="nav-link font--smaller text--uppercase text--clean color--white font--normal" href="{{item.get_link}}">{{item.title}}</a>

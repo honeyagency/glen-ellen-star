@@ -1,10 +1,19 @@
 header {
     align-items: center;
-     &.bg--image {
+
+    &.bg--image {
         padding-bottom: 20em;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    &.home {
+        @include media($screen-md) {
+            position: absolute;
+            width: 100%;
+            background-color: transparent;
+        }
     }
 }
 
@@ -28,16 +37,13 @@ header {
     @include media($screen-lg) {
         width: 20%;
     }
-
-
-
 }
 
-// .icon-logo {
-//     width: 11em;
-//     height: 1.2em;
-//     display: block;
-//     top: 50%;
-//     position: relative;
-//     transform: translateY(-50%);
-// }
+.icon-logo {
+    svg {
+        width: 100%;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

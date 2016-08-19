@@ -43,28 +43,30 @@ nav {
     }
 
     @include media($screen-md) {
-        position: relative;
-        flex-direction: row !important;
-        padding-top: 0;
-        right: 0;
-        background-color: transparent;
+        &.not-home {
+            position: relative;
+            flex-direction: row !important;
+            padding-top: 0;
+            right: 0;
+            background-color: transparent;
 
-        li {
-            align-self: center;
-            width: auto;
+            li {
+                align-self: center;
+                width: auto;
 
-            @include media(max-width $screen-md-max) {
-                a {
-                    font-size: .9rem !important;
+                @include media(max-width $screen-md-max) {
+                    a {
+                        font-size: .9rem !important;
+                    }
+                }
+
+
+                &.button {
+                    padding: .3em 1em;
                 }
             }
-
-
-            &.button {
-                padding: .3em 1em;
-            }
         }
-    } 
+    }
 
 
     @include media(max-width $screen-sm-max) {

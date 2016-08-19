@@ -53,20 +53,3 @@
         }
     }
 }
-
-.footer--connected {
-    @include span-columns(12 of 12);
-
-    @include media($screen-sm) {
-        padding: .5em 0;
-    }
-
-
-    @include media($screen-md) {
-        font-size: 1rem;
-
-        @include span-columns(8 of 12);
-
-        text-align: right;
-    }
-}

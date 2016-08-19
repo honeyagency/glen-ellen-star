@@ -4,6 +4,12 @@
 .color--cream{
 	color:map-get($cream, main);
 }
+.color--cream-dark{
+	color:map-get($cream, dark);
+}
 .color--red{
 	color: map-get($red, main);
+}
+.color--black {
+    color: map-get($black, main);
 }

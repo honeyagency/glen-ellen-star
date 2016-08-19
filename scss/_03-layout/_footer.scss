@@ -1,34 +1,134 @@
-footer {
+.footer-wrap {
     @include row;
 
     clear: both;
 
-    section {
-        @include media($screen-sm) {
-            @include span-columns(3 of 12);
+    @include media($screen-sm) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-around;
+    }
+
+
+    @include media($screen-md) {
+        justify-content: space-between;
+    }
+}
+
+.section--footer-copy {
+    width: 100%;
+    display: block;
+    text-align: center;
+    clear: both;
+    color: map-get($cream, darkest);
+
+    a {
+        color: map-get($cream, darkest);
+    }
+}
+
+.section--footer-buttons {
+    a {
+        &:first-of-type {
+            margin-bottom: .5em;
+        }
+
+        max-width: 160px;
+        margin: 0.8em auto;
+        display: block;
+    }
+
+    @include media($screen-sm) {
+        @include span-columns(3 of 12);
+
+        @include omega;
+    }
+
+
+    @include media($screen-md) {
+        @include span-columns(2 of 12);
+
+        @include omega;
+    }
+}
+
+.section--footer-address {
+    @include media($screen-sm) {
+        @include span-columns(4 of 12);
+
+        @include omega;
+    }
+
+
+    @include media($screen-md) {
+        @include span-columns(2 of 12);
+
+        @include omega;
+    }
+}
+
+.section--footer-hours {
+    @include media($screen-sm) {
+        @include span-columns(4 of 12);
+
+        @include omega;
+    }
+
+
+    @include media($screen-md) {
+        @include span-columns(3.5 of 12);
+
+        @include omega;
+    }
+}
+
+.section--footer-contact {
+    @include media($screen-sm) {
+        @include span-columns(6 of 12);
+
+        @include omega;
+    }
+
+
+    @include media($screen-md) {
+        @include span-columns(3 of 12);
+
+        @include omega;
+    }
+
+
+    input {
+        width: 100%;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: 100;
+        color: inherit;
+        padding: 0.4em 0.6em;
+        border: 0;
+    }
+
+    a {
+        display: inherit;
+
+        i {
+            width: 1.3em;
+            height: 1.3em;
+            display: inline-block;
+            background-position: center;
+            background-size: contain;
         }
     }
 
-    .section--footer-copy {
-        width: 100%;
-        display: block;
-        text-align: center;
-        clear: both;
+    .contact--line-one {
+        display: flex;
+        align-items: center;
+        padding: 1em 0;
+        justify-content: space-between;
     }
+}
 
-    @include media($screen-xs) {
-        font-size: .9rem;
-    }
-
-
-    @include media($screen-sm) {}
-
-
-    @include media($screen-md) {}
-
-
-    @include media($screen-lg) {}
-
-
-    @include media($screen-xl) {}
+.footer--connected {
+    width: 70%;
+    text-align: right;
 }
