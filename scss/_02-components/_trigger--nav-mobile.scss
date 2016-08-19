@@ -1,12 +1,12 @@
 .trigger--nav-mobile {
-    height: 25px;
+    height: 20px;
     width: 30px;
 
     // border-top: 2px solid white;
     border-bottom: 2px solid white;
     z-index: 999;
     position: relative;
-    transition: transform .2s ease-in-out;
+    transition: border .1s linear;
 
     &:before {
         width: 100%;
@@ -15,31 +15,33 @@
         transform: translateY(-3px);
         content: '';
         display: block;
-        transition: all .3s ease-in-out;
+        transition: transform 0.3s cubic-bezier(0.28, 0.55, 0.385, 1.65);
     }
 
     &:after {
         width: 100%;
         border-top: 2px solid white;
-        top: 8px;
+        top: 6px;
         position: relative;
         content: '';
         display: block;
-        transition: all .3s ease-in-out;
+        transition: transform 0.3s cubic-bezier(0.28, 0.55, 0.385, 1.65);
     }
 
     &.open {
-        border-color: transparent;
-        transition:border-color .2s ease-in-out;
+        position: fixed;
+        right: 3em;
+        border: 0px solid white;
+        transition: border .1s linear;
+
         &:before {
-            transform: translateY(10px) rotate(45deg);
-            transition: all .3s ease-in-out;
+            transform: translateY(9px) rotate(45deg);
+            transition: transform 0.3s cubic-bezier(0.28, 0.55, 0.385, 1.65);
         }
 
         &:after {
-            transition: all .3s ease-in-out;
+            transition: transform 0.3s cubic-bezier(0.28, 0.55, 0.385, 1.65);
             transform: rotate(-45deg);
-
         }
     }
 

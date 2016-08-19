@@ -1,7 +1,16 @@
 main {
     @include row;
+
     width: 100%;
 }
-img{
-	max-width: 100%;
+
+img {
+    max-width: 100%;
+}
+
+body {
+    &.open {
+        position: fixed;
+        width: 100%;
+    }
 }

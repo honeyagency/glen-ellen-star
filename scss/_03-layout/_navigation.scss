@@ -1,7 +1,6 @@
 nav {
     // Hidden, will slide in when you add ".open"
     width: 75%;
-    
     z-index: 99;
     justify-content: space-between;
 
@@ -16,11 +15,12 @@ nav {
     align-items: center;
     padding-top: 6em;
     background-color: map-get($black, main);
+    max-width: 510px;
 
     // opened up
     &.open {
         max-width: 510px;
-        transition: right .3s ease-in-out;
+        transition: right 0.3s cubic-bezier(0.28, 0.385, 0.55, 1);
         right: 0;
         box-shadow: -10px 0px 40px transparentize(map-get($black, main), 0.6);
     }
@@ -51,6 +51,7 @@ nav {
             padding-top: 0;
             right: 0;
             background-color: transparent;
+            max-width: none;
 
             li {
                 align-self: center;
@@ -71,7 +72,19 @@ nav {
     }
 
 
+    transition: right .3s ease-in-out;
+
     @include media(max-width $screen-sm-max) {
+        li {
+            &.button {
+                padding: 2em;
+            }
+        }
+    }
+}
+
+header.home {
+    nav {
         li {
             &.button {
                 padding: 2em;
