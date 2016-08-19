@@ -30,7 +30,13 @@
 
     &.open {
         position: fixed;
-        right: 3em;
+        right: 1em;
+
+        @include media($screen-md) {
+            right: 3em;
+        }
+
+
         border: 0px solid white;
         transition: border .1s linear;
 
