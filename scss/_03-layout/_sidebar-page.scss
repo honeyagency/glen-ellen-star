@@ -10,12 +10,18 @@ article.post-type-page {
 
     @include media($screen-md) {
         @include shift(0);
+        &.no-aside{
+            margin-left: 10% !important;
+        }
     }
+
 }
 
 aside.post-type-page {
+    display: none;
     @include media($screen-md) {
         max-width: 350px;
+        display: inherit;
 
         @include span-columns(3 of 12);
     }
