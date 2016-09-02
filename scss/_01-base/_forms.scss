@@ -1,0 +1,68 @@
+fieldset {
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+legend {
+    font-weight: 600;
+    padding: 0;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    font-family: $body-font-family;
+    font-size: 1.1rem;
+}
+
+#{$all-text-inputs} {
+    appearance: none;
+    background-color: white;
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    padding: .2em .5em;
+
+    // &:hover {
+    //     border-color: darken(map-get($brown, main), 10%);
+    // }
+}
+
+textarea {
+    resize: vertical;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    display: inline;
+}
+
+[type="file"] {
+    width: 100%;
+}
+
+select {
+    width: 100%;
+}
+
+[type="submit"] {
+    display: block;
+    appearance: none;
+    border: none;
+    background-color: map-get($red, main);
+    color: white;
+    text-transform: uppercase;
+    padding: 0.4em 1em;
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight !important;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+}
