@@ -30,13 +30,20 @@
 
 .section--footer-buttons {
     a {
+        display: inline-block;
+
+        @include media($screen-sm) {
+            display: block;
+        }
+
+
         &:first-of-type {
             margin-bottom: .5em;
         }
 
         max-width: 160px;
         margin: 0.8em auto;
-        display: block;
+
     }
 
     @include media($screen-sm) {
@@ -54,7 +61,11 @@
 }
 
 .section--footer-address {
+    text-align: center;
+
     @include media($screen-sm) {
+        text-align: inherit;
+
         @include span-columns(4 of 12);
 
         @include omega;
@@ -69,10 +80,13 @@
 }
 
 .section--footer-hours {
+    margin: 0 auto;
+    max-width: 370px;
+
     @include media($screen-sm) {
         @include span-columns(4 of 12);
 
-        @include omega;
+        margin: 0;
     }
 
 
@@ -100,6 +114,9 @@
 
     form {
         position: relative;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     input {
