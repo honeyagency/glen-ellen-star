@@ -98,14 +98,57 @@
     }
 
 
+    form {
+        position: relative;
+    }
+
     input {
-        width: 100%;
+        width: 70%;
         font-family: inherit;
         font-size: inherit;
         font-weight: 100;
         color: inherit;
         padding: 0.4em 0.6em;
         border: 0;
+        float: left;
+
+        &::-webkit-input-placeholder {
+            color: map-get($cream, darkest) !important;
+        }
+
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            color: map-get($cream, darkest) !important;
+        }
+
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            color: map-get($cream, darkest) !important;
+        }
+
+        &:-ms-input-placeholder {
+            color: map-get($cream, darkest) !important;
+        }
+    }
+
+    .pipe {
+        position: absolute;
+        transform: translateY(20%);
+    }
+
+    [type="submit"] {
+        width: 30%;
+        appearance: none;
+        background-color: white;
+        border: none;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            float: left;
+            width: 1px;
+            height: 100%;
+        }
     }
 
     a {

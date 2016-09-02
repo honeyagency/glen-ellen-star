@@ -1,9 +1,25 @@
 main#main-68 {
-    height: 75vh;
-    overflow: hidden;
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
-    &.home {
-        height: 90vh;
+    video {
+        display: none;
+    }
+
+    @include media($screen-sm) {
+        video {
+            display: block;
+        }
+
+        background-image: none !important;
+        height: 75vh;
+        overflow: hidden;
+
+        &.home {
+            height: 90vh;
+        }
     }
 }
 

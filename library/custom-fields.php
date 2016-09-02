@@ -61,7 +61,9 @@ function prepareSocialFields()
 
 function prepareHomepageFields()
 {
-    $video = array(
+    $imageId = get_field('field_57ca093118074');
+    $image   = new TimberImage($imageId);
+    $video   = array(
         'ogg'  => get_field('field_578ea17438012'),
         'mp4'  => get_field('field_578ea18938013'),
         'webm' => get_field('field_578ea1a038014'),
@@ -71,6 +73,7 @@ function prepareHomepageFields()
         'cta_text' => get_field('field_578eabf7676c9'),
         'cta_url'  => get_field('field_578eac12676ca'),
         'video'    => $video,
+        'image'    => $image,
     );
     return $section;
 }
