@@ -21,4 +21,31 @@
             h1 {}
         }
     }
+
+    .table-wrap {
+        height: 0px;
+        width: 100%;
+        flex-basis:100%;
+        overflow: hidden;
+
+        &.open {
+            height: auto;
+        }
+
+        &:first-of-type {
+            flex-basis: 100%;
+        }
+
+        table {
+            width: 100%;
+            tbody {
+                tr {
+                    td {
+                        border: 1px solid;
+                        padding: 1em;
+                    }
+                }
+            }
+        }
+    }
 }
