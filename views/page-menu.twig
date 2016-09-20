@@ -5,115 +5,40 @@
 	{% endif %}
 	<article class="post-type-menus spacing--gutter spacing--vert-1 spacing--dsk-horiz-4 spacing--dsk-vert-2" id="post-{{post.ID}}">
 		<section class="flex flex--justify-between section--menus">
+			
 			{% for menus in menus.menu %}
-				<a target="_blank" data-index="{{loop.index}}" class="menu-trigger flex justify--center align--center flex--grid-half spacing--vert-6 spacing--horiz-4" style="background-image:url('{{menus.image}}');"><h1 class="color--white mar-no text--uppercase text--center">{{menus.title}}</h1></a>
-				{% if loop.index == 1 %}
+				{% if menus.table %}
+					<a target="_blank" data-index="{{loop.index}}" class="menu-trigger flex justify--center align--center flex--grid-half spacing--vert-6 spacing--horiz-4" style="background-image:url('{{menus.image}}');"><h1 class="color--white mar-no text--uppercase text--center">{{menus.title}}</h1></a>
 					<div class="table-wrap" data-index="{{loop.index}}">
-					<table>
-						<tbody>
-							<tr>
-								<td colspan="2"><strong>from our wood oven</strong></td>
-							</tr><tr>
-							<td>vegetables</td>
-							<td>13 ea</td>
-						</tr>
-						<tr>
-							<td>brussels sprouts, brown sugar bacon marmalade</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>golden beets, harissa crumble, blood orange oil</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>cauliflower, tahini, almonds, sumac</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>corn, cotija, chipotle, lime</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>padron peppers, shabazi spice</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td colspan="2"><strong>pizza</strong></td>
-							
-						</tr>
-						<tr>
-							<td>margherita, basil, tomato, mozzarella</td>
-							<td>16</td>
-						</tr>
-						<tr>
-							<td>tomato cream pie, aleppo chilli</td>
-							<td>17</td>
-						</tr>
-						<tr>
-							<td>white, guanciale, arugula</td>
-							<td>18</td>
-						</tr>
-						
-						<tr>
-							<td colspan="2"><strong>starters</strong></td>
-						</tr>
-						<tr>
-							<td>chilled tomato gazpacho, ricotta crostini</td>
-							<td>10</td>
-						</tr>
-						<tr>
-							<td>simple green salad, champagne vinaigrette</td>
-							<td>9</td>
-						</tr>
-						<tr>
-							<td>heirloom tomato panzanella, bulgarian feta, bagna cauda</td>
-							<td>15</td>
-						</tr>
-						<tr>
-							<td>house baked bread, za’atar oil</td>
-							<td>6</td>
-						</tr>
-						
-						<tr>
-							<td colspan="2"><strong>main courses</strong></td>
-						</tr>
-						<tr>
-							<td>brick chicken, summer corn succotash, pickled jalapeño</td>
-							<td>27</td>
-						</tr>
-						<tr>
-							<td>grilled five dot new york strip steak, snap pea fricassee, guanciale, asada</td>
-							<td>6oz-26 / 12oz-44</td>
-						</tr>
-						<tr>
-							<td>spring lamb ragu, house cavatelli, pickled ramps, moroccan olives, calabrian chili</td>
-							<td>28</td>
-						</tr>
-						<tr>
-							<td>house made farfalle, burrata, morel mushrooms, hen egg bottarga, pine nuts, basil</td>
-							<td>25</td>
-						</tr>
-						<tr>
-							<td>whole roasted dourade, preserved meyer lemon, sauce “romesco”</td>
-							<td>35</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			{% endif %}
-		{% endfor %}
-	</section>
-	{% if menus.link %}
-		<section class="post-type-{{post.post_type}} spacing--horiz-1 spacing--vert-1 mobile-hide spacing--dsk-vert-3" id="post-{{post.ID}}">
-			<a href="{{menus.link}}" title="{{menus.text}}" class="button color--red border--thick center text--uppercase">{{menus.text}}</a>
+						<table>
+							<tbody>
+								{% for row in menus.table.body %}
+									<tr>
+										{% for cell in row %}
+											<td>{{cell.c}}</td>
+										{% endfor %}
+									</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+					</div>
+					
+				{% else %}
+					<a target="_blank" href="{{menus.file}}" class="menu-trigger flex justify--center align--center flex--grid-half spacing--vert-6 spacing--horiz-4" style="background-image:url('{{menus.image}}');"><h1 class="color--white mar-no text--uppercase text--center">{{menus.title}}</h1></a>
+				{% endif %}
+			{% endfor %}
 		</section>
-	{% endif %}
-	
-	
-	{% if post.content %}
-		<section class="post-type-{{post.post_type}} spacing--horiz-1 spacing--vert-1" id="post-{{post.ID}}">
-			{{post.content}}
-		</section>
-	{% endif %}
-</article>
+		{% if menus.link %}
+			<section class="post-type-{{post.post_type}} spacing--horiz-1 spacing--vert-1 mobile-hide spacing--dsk-vert-3" id="post-{{post.ID}}">
+				<a href="{{menus.link}}" title="{{menus.text}}" class="button color--red border--thick center text--uppercase">{{menus.text}}</a>
+			</section>
+		{% endif %}
+		
+		
+		{% if post.content %}
+			<section class="post-type-{{post.post_type}} spacing--horiz-1 spacing--vert-1" id="post-{{post.ID}}">
+				{{post.content}}
+			</section>
+		{% endif %}
+	</article>
 {% endblock %}

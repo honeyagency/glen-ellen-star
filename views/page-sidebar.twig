@@ -11,7 +11,7 @@
 	</article>
 	<aside class="post-type-{{post.post_type}} spacing--horiz-1 spacing--vert-1 spacing--dsk-vert-3">
 		{% for image in sidebar %}
-			<img class="block--sidebar-image" src="{{image|resize(600)}}" alt="{{image.post_title}}" data-action="zoom">
+			<img class="block--sidebar-image" src="{{image|resize(1200)}}" alt="{{image.post_title}}" data-action="zoom" data-original="{{image}}">
 		{% endfor %}
 
 </div>

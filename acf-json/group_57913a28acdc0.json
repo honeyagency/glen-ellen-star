@@ -18,7 +18,7 @@
             "collapsed": "",
             "min": "",
             "max": "",
-            "layout": "table",
+            "layout": "block",
             "button_label": "Add Row",
             "sub_fields": [
                 {
@@ -84,6 +84,21 @@
                     "min_size": "",
                     "max_size": "",
                     "mime_types": ""
+                },
+                {
+                    "key": "field_57e1756a7d4ce",
+                    "label": "The Menu",
+                    "name": "the_menu_items",
+                    "type": "table",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "use_header": 0
                 }
             ]
         },
@@ -147,5 +162,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1470331272
+    "modified": 1474393654
 }
