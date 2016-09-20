@@ -7,22 +7,35 @@
 		<section class="flex flex--justify-between section--menus">
 			
 			{% for menus in menus.menu %}
-				{% if menus.table %}
-					<a target="_blank" data-index="{{loop.index}}" class="menu-trigger flex justify--center align--center flex--grid-half spacing--vert-6 spacing--horiz-4" style="background-image:url('{{menus.image}}');"><h1 class="color--white mar-no text--uppercase text--center">{{menus.title}}</h1></a>
-					<div class="table-wrap" data-index="{{loop.index}}">
-						<table>
-							<tbody>
-								{% for row in menus.table.body %}
-									<tr>
+				{# {{menus|print_r}} #}
+				{% if menus.table_section  %}
+					<a target="_blank" data-index="{{loop.index}}" class="menu-trigger flex justify--center align--center flex--grid-half spacing--vert-6 spacing--horiz-4" style="background-image:url('{{menus.image}}');order:{{loop.index}}"><h1 class="color--white mar-no text--uppercase text--center">{{menus.title}}</h1></a>
+					<div class="table-wrap text--center" data-index="{{loop.index}}">
+						<h4>{{menus.subtitle}}</h4><br>
+						{% for section in menus.table_section %}
+							<strong class="menu-section-title">{{section.title}}</strong>
+							
+							{% if section.table.body %}
+								{% spaceless %}
+								<div class="menu-section">
+									{% for row in section.table.body %}
 										{% for cell in row %}
-											<td>{{cell.c}}</td>
+											{% if loop.index > 1 %}
+												{% if cell.c != null %}
+												<strong class="spacing--horiz-1">{{cell.c}}</strong>
+												{% endif %}
+											{% else %}
+												<span>{{cell.c}}</span>
+											{% endif %}
 										{% endfor %}
-									</tr>
-								{% endfor %}
-							</tbody>
-						</table>
+										<br>
+									{% endfor %}
+								</div>
+								{% endspaceless %}
+							{% endif %}
+						
+						{% endfor %}
 					</div>
-					
 				{% else %}
 					<a target="_blank" href="{{menus.file}}" class="menu-trigger flex justify--center align--center flex--grid-half spacing--vert-6 spacing--horiz-4" style="background-image:url('{{menus.image}}');"><h1 class="color--white mar-no text--uppercase text--center">{{menus.title}}</h1></a>
 				{% endif %}

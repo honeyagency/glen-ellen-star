@@ -43,7 +43,6 @@
 
         max-width: 160px;
         margin: 0.8em auto;
-
     }
 
     @include media($screen-sm) {
@@ -130,21 +129,21 @@
         float: left;
 
         &::-webkit-input-placeholder {
-            color: map-get($cream, darkest) !important;
+            color: map-get($black, main) !important;
         }
 
         &:-moz-placeholder {
             /* Firefox 18- */
-            color: map-get($cream, darkest) !important;
+            color: map-get($black, main) !important;
         }
 
         &::-moz-placeholder {
             /* Firefox 19+ */
-            color: map-get($cream, darkest) !important;
+            color: map-get($black, main) !important;
         }
 
         &:-ms-input-placeholder {
-            color: map-get($cream, darkest) !important;
+            color: map-get($black, main) !important;
         }
     }
 
@@ -191,4 +190,17 @@
 .footer--connected {
     width: 70%;
     text-align: right;
+}
+
+.section--footer-contact, .section--footer-hours {
+    @include media($max-md) {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
+
+.mob-block {
+    @include media($max-md) {
+        display: block;
+    }
 }

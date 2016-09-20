@@ -23,12 +23,26 @@
     }
 
     .table-wrap {
+        &:nth-of-type(1) {
+            order: 1;
+        }
+
+        &:nth-of-type(2), &:nth-of-type(3) {
+            order: 4;
+        }
+
         height: 0px;
         width: 100%;
-        flex-basis:100%;
+        flex-basis: 100%;
         overflow: hidden;
+        margin: 0;
+        transition: margin 0.3s cubic-bezier(0.28, 0.55, 0.385, 1);
 
         &.open {
+            flex-basis: 100%;
+            transition: margin 0.3s cubic-bezier(0.28, 0.55, 0.385, 1);
+            margin-top: 3em;
+            margin-bottom: 3em;
             height: auto;
         }
 
@@ -38,13 +52,34 @@
 
         table {
             width: 100%;
+            margin-top: 0.6em;
+
             tbody {
                 tr {
                     td {
                         border: 1px solid;
-                        padding: 1em;
+                        padding: .6em;
                     }
                 }
+            }
+        }
+
+        .menu-section {
+            margin: 1em auto 3em auto;
+            line-height: 1.9;
+
+            strong {
+                font-size: 0.8em;
+            }
+        }
+
+        .menu-section-title {
+            &:after {
+                content: '';
+                display: block;
+                border-top: 2px solid;
+                width: 30px;
+                margin: 1em auto 0 auto;
             }
         }
     }

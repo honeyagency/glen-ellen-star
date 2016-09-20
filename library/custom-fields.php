@@ -84,15 +84,30 @@ function prepareMenuPageFields()
     if (have_rows('field_57913a2ebe615')) {
         while (have_rows('field_57913a2ebe615')) {
             the_row();
-            $image  = new TimberImage(get_sub_field('field_57913a3ebe617'));
+            $image = new TimberImage(get_sub_field('field_57913a3ebe617'));
+            
+            if (have_rows('field_57e1864c91bf0')) {
+                $menuSection = array();
+                while (have_rows('field_57e1864c91bf0')) {
+                    the_row();
+                    $menuSection[] = array(
+                        'title' => get_sub_field('field_57e186e28327a'),
+                        'table' => get_sub_field('field_57e186ed8327b'),
+                    );
+                }
+            }else{
+                $menuSection = null;
+            }
             $menu[] = array(
-                'title' => get_sub_field('field_57913a35be616'),
-                'image' => $image,
-                'file'  => get_sub_field('field_57913a4cbe618'),
-                'table' => get_sub_field('field_57e1756a7d4ce'),
+                'title'         => get_sub_field('field_57913a35be616'),
+                'subtitle' => get_sub_field('field_57e1a19546ca3'),
+                'image'         => $image,
+                'file'          => get_sub_field('field_57913a4cbe618'),
+                'table_section' => $menuSection,
 
             );
         }}
+
     $section = array(
         'menu' => $menu,
         'link' => get_field('field_57a378dc0fb84'),
