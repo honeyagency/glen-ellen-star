@@ -77,6 +77,31 @@ function prepareHomepageFields()
     );
     return $section;
 }
+function preparePressFields()
+{
+    if (have_rows('field_57be2846aca23')) {
+        while (have_rows('field_57be2846aca23')) {
+            the_row();
+            $imageId = get_sub_field('field_57be285daca24');
+            if (!empty($imageId)) {
+                $image = new TimberImage($imageId);
+            } else {
+                $image = null;
+            }
+            $pressItem[] = array(
+                'image'       => $image,
+                'title'       => get_sub_field('field_57e1c28010902'),
+                'description' => get_sub_field('field_57be287daca26'),
+                'link'        => get_sub_field('field_57be2874aca25'),
+            );
+        }
+    }
+    $section = array(
+        'press'        => $pressItem,
+        'link_section' => get_field('field_57e1c6a2e14af'),
+    );
+    return $section;
+}
 
 function prepareMenuPageFields()
 {
@@ -85,7 +110,7 @@ function prepareMenuPageFields()
         while (have_rows('field_57913a2ebe615')) {
             the_row();
             $image = new TimberImage(get_sub_field('field_57913a3ebe617'));
-            
+
             if (have_rows('field_57e1864c91bf0')) {
                 $menuSection = array();
                 while (have_rows('field_57e1864c91bf0')) {
@@ -95,12 +120,12 @@ function prepareMenuPageFields()
                         'table' => get_sub_field('field_57e186ed8327b'),
                     );
                 }
-            }else{
+            } else {
                 $menuSection = null;
             }
             $menu[] = array(
                 'title'         => get_sub_field('field_57913a35be616'),
-                'subtitle' => get_sub_field('field_57e1a19546ca3'),
+                'subtitle'      => get_sub_field('field_57e1a19546ca3'),
                 'image'         => $image,
                 'file'          => get_sub_field('field_57913a4cbe618'),
                 'table_section' => $menuSection,

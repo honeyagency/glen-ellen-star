@@ -72,6 +72,29 @@
     @include media($screen-xl) {}
 }
 
+.flex--grid-fourth {
+    width: 100%;
+    flex-basis: 100%;
+
+
+    @include media($screen-xs) {}
+
+
+    @include media($screen-sm) {
+        flex-basis: calc(100% / 4 * 0.952);
+        width: calc(100% / 4 * 0.952);
+    }
+
+
+    @include media($screen-md) {}
+
+
+    @include media($screen-lg) {}
+
+
+    @include media($screen-xl) {}
+}
+
 .mobile-hide {
     @include media(max-width $screen-md-max) {
         display: none !important;

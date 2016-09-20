@@ -4,18 +4,25 @@
 		{% include 'components/sections/section--homepage-content.twig' %}
 	{% endif %}
 	<article class="post-type-menus spacing--gutter spacing--vert-1 spacing--dsk-horiz-4 spacing--dsk-vert-2" id="post-{{post.ID}}">
-		<section class="flex flex--justify-between section--menus">
-			{% for menus in menus.menu %}
-				<a target="_blank" href="{{menus.file}}" class="flex justify--center align--center flex--grid-half spacing--vert-6 spacing--horiz-4" style="background-image:url('{{menus.image}}');"><h1 class="color--white mar-no text--uppercase text--center">{{menus.title}}</h1></a>
+		<h1>{{post.post_title}}</h1>
+		<h3>Press</h3><br>
+		<section class="flex flex--justify-between flex-wrap">
+			{% for press in press.press %}
+
+				<div class="flex--grid-fourth  spacing--horiz-1 spacing--vert-1 bg--white text--center color--black">
+					<div class="pressLogoWrap">
+					<img align="center" height="" src="{{press.image}}">
+				</div>
+					<h4>{{press.title}}</h4>
+					<div>{{press.description}}</div>
+					<a href="{{press.link}}">Read More ></a>
+				</div>
 			{% endfor %}
 		</section>
-		{% if menus.link %}
-			<section class="post-type-{{post.post_type}} spacing--horiz-1 spacing--vert-1 mobile-hide spacing--dsk-vert-3" id="post-{{post.ID}}">
-			<a href="{{menus.link}}" title="{{menus.text}}" class="button color--red border--thick center text--uppercase">{{menus.text}}</a>
-			</section>
-		{% endif %}
-		
-		
+		<section class="spacing--vert-2">
+			<h3>Downloads</h3><br>
+		{{press.link_section}}
+		</section>
 		{% if post.content %}
 			<section class="post-type-{{post.post_type}} spacing--horiz-1 spacing--vert-1" id="post-{{post.ID}}">
 				{{post.content}}
