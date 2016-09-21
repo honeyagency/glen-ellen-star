@@ -380,6 +380,30 @@
             "maxlength": "",
             "readonly": 0,
             "disabled": 0
+        },
+        {
+            "key": "field_57e2cb7f7e20a",
+            "label": "Default Social Image",
+            "name": "default_social_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -399,5 +423,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1472857181
+    "modified": 1474481051
 }

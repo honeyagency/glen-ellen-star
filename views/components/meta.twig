@@ -1,0 +1,31 @@
+{# Title #}
+{% if post.slug == 'home' %}
+	{% set metaTitle = site.name %}
+{% elseif wp_title %}
+	{% set metaTitle = wp_title %}
+{% else %}
+	{% set metaTitle = site.name %}
+{% endif %}
+{# Description #}
+{% if post.slug == 'home' %}
+	{% set metaDescription = site.description %}
+{% else %}
+	{% set metaDescription = post.post_excerpt %}
+{% endif %}
+{% if post.slug == 'home' %}
+	{% set metaImage = social.social_image %}
+{% elseif post.get_thumbnail.src != '' %}
+	{% set metaImage = post.get_thumbnail.src %}
+{% else %}
+	{% set metaImage = social.social_image %}
+{% endif %}
+
+<meta charset="{{site.charset}}" />
+<title> {{metaTitle}}</title>
+<meta name="description" content="{{metaDescription}}">
+<meta property="og:title" content="{{metaTitle}}">
+<meta property="og:description" content="{{metaDescription}}">
+<meta property="og:image" content="{{metaImage}}">
+<meta property="og:url" content="{{post.permalink}}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="og:site_name" content="{{site.name}}">

@@ -48,14 +48,14 @@
     @include media($screen-sm) {
         @include span-columns(3 of 12);
 
-        @include omega;
+        // @include omega;
     }
 
 
     @include media($screen-md) {
         @include span-columns(2 of 12);
 
-        @include omega;
+        // @include omega;
     }
 }
 
@@ -67,14 +67,14 @@
 
         @include span-columns(4 of 12);
 
-        @include omega;
+        // @include omega;
     }
 
 
     @include media($screen-md) {
         @include span-columns(2 of 12);
 
-        @include omega;
+        // @include omega;
     }
 }
 
@@ -92,7 +92,7 @@
     @include media($screen-md) {
         @include span-columns(3.5 of 12);
 
-        @include omega;
+        // @include omega;
     }
 }
 
@@ -100,14 +100,14 @@
     @include media($screen-sm) {
         @include span-columns(6 of 12);
 
-        @include omega;
+        // @include omega;
     }
 
 
     @include media($screen-md) {
         @include span-columns(3 of 12);
 
-        @include omega;
+        // @include omega;
     }
 
 
@@ -119,7 +119,13 @@
     }
 
     input {
-        width: 70%;
+        width: 55%;
+
+        @include media($screen-sm) {
+            width: 65%;
+        }
+
+
         font-family: inherit;
         font-size: inherit;
         font-weight: 100;
@@ -153,7 +159,13 @@
     }
 
     [type="submit"] {
-        width: 30%;
+        width: 45%;
+
+        @include media($screen-sm) {
+            width: 35%;
+        }
+
+
         appearance: none;
         background-color: white;
         border: none;

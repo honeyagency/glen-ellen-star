@@ -51,10 +51,13 @@ function prepareFooterFields()
 
 function prepareSocialFields()
 {
+    $imageId = get_field('field_57e2cb7f7e20a', 'option');
+    $image = new TimberImage($imageId);
     $section = array(
         'facebook'  => get_field('field_578e6b9260eff', 'option'),
         'twitter'   => get_field('field_578e6b9d60f00', 'option'),
         'instagram' => get_field('field_578e6bb460f01', 'option'),
+        'social_image' => $image,
     );
     return $section;
 }
