@@ -20,13 +20,7 @@
 								<div class="menu-section">
 									{% for row in section.table.body %}
 										{% for cell in row %}
-											{% if loop.index > 1 %}
-												{% if cell.c != null %}
-												<strong class="spacing--horiz-1">{{cell.c}}</strong>
-												{% endif %}
-											{% else %}
 												<span>{{cell.c}}</span>
-											{% endif %}
 										{% endfor %}
 										<br>
 									{% endfor %}
