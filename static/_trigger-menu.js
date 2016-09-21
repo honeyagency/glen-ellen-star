@@ -1,5 +1,6 @@
 jQuery(document).ready(function($) {
     $('.menu-trigger').on('click touchstart', function(event) {
+       $('.table-wrap').removeClass('open');
         var $index = $(this).attr('data-index');
         if ($index) {
             event.preventDefault();
