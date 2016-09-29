@@ -155,7 +155,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "use_header": 0
+                            "use_header": 2
                         }
                     ]
                 }
@@ -221,5 +221,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1474404788
+    "modified": 1475182371
 }
