@@ -6,7 +6,7 @@ function bc_dashboard_widget_function() {
     load_template($docs_template);
 }
 function bc_add_dashboard_widgets() {
-    wp_add_dashboard_widget('wp_dashboard_widget', 'Buscemi Docs', 'bc_dashboard_widget_function');
+    wp_add_dashboard_widget('wp_dashboard_widget', 'Glen Ellen Star Training', 'bc_dashboard_widget_function');
 }
 add_action('wp_dashboard_setup', 'bc_add_dashboard_widgets');
 
