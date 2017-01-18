@@ -3,25 +3,13 @@
     "title": "Menu Page",
     "fields": [
         {
-            "key": "field_57913a2ebe615",
-            "label": "Menu",
-            "name": "menu_section",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": "",
-            "max": "",
-            "layout": "block",
-            "button_label": "Add Row",
             "sub_fields": [
                 {
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
                     "key": "field_57913a35be616",
                     "label": "Title",
                     "name": "menu_section_title",
@@ -34,15 +22,15 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": "",
                     "readonly": 0,
                     "disabled": 0
                 },
                 {
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
                     "key": "field_57e1a19546ca3",
                     "label": "Menu Subtitle",
                     "name": "menu_subtitle",
@@ -55,13 +43,39 @@
                         "class": "",
                         "id": ""
                     },
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "key": "field_587fff6c8104e",
+                    "label": "Date",
+                    "name": "menu_date_field",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
                 },
                 {
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
                     "key": "field_57913a3ebe617",
                     "label": "Background Image",
                     "name": "menu_section_image",
@@ -73,19 +87,14 @@
                         "width": "",
                         "class": "",
                         "id": ""
-                    },
-                    "return_format": "id",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
+                    }
                 },
                 {
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "",
                     "key": "field_57913a4cbe618",
                     "label": "Menu File",
                     "name": "menu_file",
@@ -97,33 +106,16 @@
                         "width": "",
                         "class": "",
                         "id": ""
-                    },
-                    "return_format": "url",
-                    "library": "all",
-                    "min_size": "",
-                    "max_size": "",
-                    "mime_types": ""
+                    }
                 },
                 {
-                    "key": "field_57e1864c91bf0",
-                    "label": "Menu Sections",
-                    "name": "menu_sections",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "collapsed": "",
-                    "min": "",
-                    "max": "",
-                    "layout": "block",
-                    "button_label": "Add Row",
                     "sub_fields": [
                         {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
                             "key": "field_57e186e28327a",
                             "label": "Title",
                             "name": "menu_section_title",
@@ -136,11 +128,8 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            "readonly": 0,
+                            "disabled": 0
                         },
                         {
                             "key": "field_57e186ed8327b",
@@ -157,11 +146,50 @@
                             },
                             "use_header": 2
                         }
-                    ]
+                    ],
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add Row",
+                    "collapsed": "",
+                    "key": "field_57e1864c91bf0",
+                    "label": "Menu Sections",
+                    "name": "menu_sections",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
                 }
-            ]
+            ],
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Row",
+            "collapsed": "",
+            "key": "field_57913a2ebe615",
+            "label": "Menu",
+            "name": "menu_section",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
         },
         {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
             "key": "field_57a378dc0fb84",
             "label": "CTA Link",
             "name": "reservation_cta_link",
@@ -174,15 +202,15 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
             "readonly": 0,
             "disabled": 0
         },
         {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
             "key": "field_57a378e80fb85",
             "label": "CTA Text",
             "name": "reservation_cta_text",
@@ -195,11 +223,6 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
             "readonly": 0,
             "disabled": 0
         }
@@ -221,5 +244,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1475182371
+    "modified": 1484783479
 }

@@ -52,11 +52,11 @@ function prepareFooterFields()
 function prepareSocialFields()
 {
     $imageId = get_field('field_57e2cb7f7e20a', 'option');
-    $image = new TimberImage($imageId);
+    $image   = new TimberImage($imageId);
     $section = array(
-        'facebook'  => get_field('field_578e6b9260eff', 'option'),
-        'twitter'   => get_field('field_578e6b9d60f00', 'option'),
-        'instagram' => get_field('field_578e6bb460f01', 'option'),
+        'facebook'     => get_field('field_578e6b9260eff', 'option'),
+        'twitter'      => get_field('field_578e6b9d60f00', 'option'),
+        'instagram'    => get_field('field_578e6bb460f01', 'option'),
         'social_image' => $image,
     );
     return $section;
@@ -129,6 +129,7 @@ function prepareMenuPageFields()
             $menu[] = array(
                 'title'         => get_sub_field('field_57913a35be616'),
                 'subtitle'      => get_sub_field('field_57e1a19546ca3'),
+                'date'          => get_sub_field('field_587fff6c8104e'),
                 'image'         => $image,
                 'file'          => get_sub_field('field_57913a4cbe618'),
                 'table_section' => $menuSection,
