@@ -97,5 +97,12 @@
                 margin: 1em auto 0 auto;
             }
         }
+
+        @include media($max-md) {
+            flex-basis: 100% !important;
+            margin-top: 3em !important;
+            margin-bottom: 3em !important;
+            height: auto !important;
+        }
     }
 }

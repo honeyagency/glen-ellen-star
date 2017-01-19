@@ -11,7 +11,7 @@
 				{% if menus.table_section  %}
 					<a target="_blank" data-index="{{loop.index}}" class="menu-trigger flex justify--center align--center flex--grid-half spacing--vert-6 spacing--horiz-4" style="background-image:url('{{menus.image}}');order:{{loop.index}}"><h1 class="color--white mar-no text--uppercase text--center">{{menus.title}}</h1></a>
 					<div class="table-wrap text--center" data-index="{{loop.index}}">
-						<h4>{{menus.subtitle}}</h4><br>
+						<h4 style="max-width: 650px;margin: 0 auto;">{{menus.subtitle}}</h4><br>
 						{% if menus.date != null %}<div class="font--larger color--red menu--date">{{menus.date}}</div>{% endif %}
 						{% for section in menus.table_section %}
 							<strong class="menu-section-title">{{section.title}}</strong>
