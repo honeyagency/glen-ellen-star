@@ -1,8 +1,10 @@
 main#main-68 {
+    position: relative;
     height: 50vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    overflow: hidden;
 
     video {
         display: none;
@@ -15,7 +17,6 @@ main#main-68 {
 
         background-image: none !important;
         height: 75vh;
-        overflow: hidden;
 
         &.home {
             height: 90vh;
@@ -28,7 +29,13 @@ main#main-68 {
 }
 
 .home--cta {
-    padding: 0.5em 1em;
+    padding: 5px 10px;
     letter-spacing: 1.5px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+
+    @include media($screen-sm) {
+        padding: 0.5em 1em;
+        letter-spacing: 1.5px;
+        font-size: 1.3rem;
+    }
 }

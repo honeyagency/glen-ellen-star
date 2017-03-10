@@ -77,7 +77,10 @@ function prepareHomepageFields()
         'cta_url'  => get_field('field_578eac12676ca'),
         'video'    => $video,
         'image'    => $image,
+        'youtube'  => get_field('field_58c3012aa9b6f'),
+        'button'   => get_field('field_58c3015ca9b70'),
     );
+
     return $section;
 }
 function preparePressFields()

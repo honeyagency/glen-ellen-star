@@ -3,4 +3,8 @@
 	{% if home.text != null %}<h1 class="color--white home--title">{{home.text}}</h1>{% endif %}
 	{% if home.cta_url != null %}<a class="button color--white bg--red border--red home--cta rsrv-link" title="{{home.cta_text}}" href="{{home.cta_url}}">{{home.cta_text}}</a>{% endif %}
 </div>
+
 {% include 'components/sections/section--homepage-video.twig' %}
+{% if home.youtube != null %}
+{% include 'components/sections/section--home-youtube.twig' %}
+{% endif %}
