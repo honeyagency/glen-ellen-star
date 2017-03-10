@@ -5,6 +5,13 @@
     transform: translateY(-50%);
 
     h1 {
+        @include media($max-sm) {
+            font-size: 1.7rem;
+            margin-bottom: 1em;
+        }
+
+
         // text-shadow: 0 2px 3px transparentize(map-get($black, main), .7);
+   
     }
 }

@@ -3,6 +3,8 @@
     "title": "Home Page",
     "fields": [
         {
+            "placement": "top",
+            "endpoint": 0,
             "key": "field_578eabe4676c7",
             "label": "Content",
             "name": "",
@@ -14,11 +16,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
+            }
         },
         {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
             "key": "field_578eabf3676c8",
             "label": "Center Text",
             "name": "center_text",
@@ -31,15 +36,15 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
             "readonly": 0,
             "disabled": 0
         },
         {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
             "key": "field_578eabf7676c9",
             "label": "Call To Action Text",
             "name": "call_to_action_text",
@@ -52,15 +57,12 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
             "readonly": 0,
             "disabled": 0
         },
         {
+            "default_value": "",
+            "placeholder": "",
             "key": "field_578eac12676ca",
             "label": "Call To Action URL",
             "name": "call_to_action_url",
@@ -72,11 +74,11 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
+            }
         },
         {
+            "placement": "top",
+            "endpoint": 0,
             "key": "field_578ea14c38011",
             "label": "Video",
             "name": "",
@@ -88,11 +90,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
+            }
         },
         {
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "",
             "key": "field_578ea17438012",
             "label": "OGG",
             "name": "video_format_ogg",
@@ -104,14 +109,14 @@
                 "width": 33,
                 "class": "",
                 "id": ""
-            },
+            }
+        },
+        {
             "return_format": "url",
             "library": "all",
             "min_size": "",
             "max_size": "",
-            "mime_types": ""
-        },
-        {
+            "mime_types": "",
             "key": "field_578ea18938013",
             "label": "MP4",
             "name": "video_format_mp4",
@@ -123,14 +128,14 @@
                 "width": 33,
                 "class": "",
                 "id": ""
-            },
+            }
+        },
+        {
             "return_format": "url",
             "library": "all",
             "min_size": "",
             "max_size": "",
-            "mime_types": ""
-        },
-        {
+            "mime_types": "",
             "key": "field_578ea1a038014",
             "label": "WebM",
             "name": "video_format_webm",
@@ -142,14 +147,19 @@
                 "width": 33,
                 "class": "",
                 "id": ""
-            },
-            "return_format": "url",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": ""
+            }
         },
         {
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
             "key": "field_57ca093118074",
             "label": "Video Image",
             "name": "video_image",
@@ -161,17 +171,61 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "return_format": "id",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            }
+        },
+        {
+            "placement": "top",
+            "endpoint": 0,
+            "key": "field_58c30124a9b6e",
+            "label": "Youtube",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_58c3012aa9b6f",
+            "label": "Video ID",
+            "name": "video_id",
+            "type": "text",
+            "instructions": "https:\/\/www.youtube.com\/watch?v=<span style=\"color:red;\">U5dGwGj5D7c<\/span>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_58c3015ca9b70",
+            "label": "Button Text",
+            "name": "call_to_action_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
         }
     ],
     "location": [
@@ -193,5 +247,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1472858429
+    "modified": 1489174895
 }
