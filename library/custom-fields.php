@@ -78,6 +78,7 @@ function prepareHomepageFields()
         'video'    => $video,
         'image'    => $image,
         'youtube'  => get_field('field_58c3012aa9b6f'),
+        'pretext'  => get_field('field_58c356784ed8e'),
         'button'   => get_field('field_58c3015ca9b70'),
     );
 
