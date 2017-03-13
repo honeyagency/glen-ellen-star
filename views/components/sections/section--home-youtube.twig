@@ -51,17 +51,13 @@ function onPlayerReady(event) {
 
  function stopVideo() {
     body.className -= " videoplaying"; 
-    homevid.play();
+
     player.stopVideo();
  }
  function startVideo(){
  	body.className += " videoplaying"; 
-    jQuery(document).ready(function($) {
-    if ($('#main-68:hidden').length != 0) {
-        homevid.pause();
-    player.playVideo();
-    }
-});
+
+ 	player.playVideo();
 }
 jQuery(document).ready(function($) {
     $('#videoLink').on('click touchstart', function(event) {
