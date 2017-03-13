@@ -56,8 +56,12 @@ function onPlayerReady(event) {
  }
  function startVideo(){
  	body.className += " videoplaying"; 
- 	homevid.pause();
- 	player.playVideo();
+    jQuery(document).ready(function($) {
+    if ($('#main-68:hidden').length != 0) {
+        homevid.pause();
+    player.playVideo();
+    }
+});
 }
 jQuery(document).ready(function($) {
     $('#videoLink').on('click touchstart', function(event) {

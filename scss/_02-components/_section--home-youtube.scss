@@ -9,4 +9,14 @@
         transition: bottom .2s ease-in-out;
         bottom: 1em;
     }
+
+    @include media($max-sm) {
+        .font--larger {
+            font-size: 1em;
+        }
+
+        .button {
+            font-size: .8em;
+        }
+    }
 }
