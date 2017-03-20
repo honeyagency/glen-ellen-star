@@ -2,13 +2,13 @@
 <div class="color--white font--larger">{{home.pretext}}</div>
 <div class="button bg--black color--white font--heading font--smaller text--uppercase">{{home.button}}</div>
 </div>
-
+{% include 'components/youtube.twig' %}
 <script>
  // 2. This code loads the IFrame Player API code asynchronously.
- var tag = document.createElement('script');
- tag.src = "http://www.youtube.com/iframe_api";
- var firstScriptTag = document.getElementsByTagName('script')[0];
- firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+ // var tag = document.createElement('script');
+ // tag.src = "http://www.youtube.com/iframe_api";
+ // var firstScriptTag = document.getElementsByTagName('script')[0];
+ // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
  // 3. This function creates an <iframe> (and YouTube player)
  //    after the API code downloads.
  var theVideoId;
@@ -22,10 +22,10 @@
 
  function onYouTubeIframeAPIReady() {
      player = new YT.Player('player', {
+         origin: '{{site.url}}',
          height: '720',
          width: '1280',
          videoId: theVideoId,
-         origin: 'glenellenstar.com',
          events: {
              'onReady': onPlayerReady,
              'onStateChange': onPlayerStateChange
