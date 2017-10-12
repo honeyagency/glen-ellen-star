@@ -2,7 +2,7 @@
 <div class="block--home-center text--center">
 	{% if home.text != null %}<h1 class="color--white home--title">{{home.text}}</h1>{% endif %}
 	{% if home.cta_url != null %}<a class="button color--white bg--red border--red home--cta rsrv-link" title="{{home.cta_text}}" href="{{home.cta_url}}">{{home.cta_text}}</a>{% endif %}
-	{# <p class="bg--white color--black spacing--horiz-1 spacing--vert-1 flex--grid-half" style="margin:0 auto;">For the time being, please call the restaurant directly for reservation at (707) 343-1384</p> #}
+	{% if home.messaging %}<div class="messaging bg--white color--black spacing--horiz-1 spacing--vert-1 flex--grid-half">{{home.messaging}}</div>{% endif %}
 </div>
 
 {% include 'components/sections/section--homepage-video.twig' %}

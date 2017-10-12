@@ -77,6 +77,25 @@
             "placeholder": ""
         },
         {
+            "key": "field_59e00080760d4",
+            "label": "Messaging",
+            "name": "messaging",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_578ea14c38011",
             "label": "Video",
             "name": "",
@@ -272,5 +291,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1495223120
+    "modified": 1507852550
 }

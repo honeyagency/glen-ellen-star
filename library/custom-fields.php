@@ -72,14 +72,15 @@ function prepareHomepageFields()
         'webm' => get_field('field_578ea1a038014'),
     );
     $section = array(
-        'text'     => get_field('field_578eabf3676c8'),
-        'cta_text' => get_field('field_578eabf7676c9'),
-        'cta_url'  => get_field('field_578eac12676ca'),
-        'video'    => $video,
-        'image'    => $image,
-        'youtube'  => get_field('field_58c3012aa9b6f'),
-        'pretext'  => get_field('field_58c356784ed8e'),
-        'button'   => get_field('field_58c3015ca9b70'),
+        'text'      => get_field('field_578eabf3676c8'),
+        'cta_text'  => get_field('field_578eabf7676c9'),
+        'cta_url'   => get_field('field_578eac12676ca'),
+        'messaging' => get_field('field_59e00080760d4'),
+        'video'     => $video,
+        'image'     => $image,
+        'youtube'   => get_field('field_58c3012aa9b6f'),
+        'pretext'   => get_field('field_58c356784ed8e'),
+        'button'    => get_field('field_58c3015ca9b70'),
     );
 
     return $section;
