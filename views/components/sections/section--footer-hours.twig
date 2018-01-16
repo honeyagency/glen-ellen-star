@@ -1,12 +1,12 @@
 <section class="section--footer-hours spacing--vert-1 spacing--dsk-vert-0 text--uppercase">
 	<strong class="font--smaller">Hours</strong><br>
-	<div>SUN - THU <span class="float--right font--bold">{{hours.sun_open}} - {{hours.sun_close}}</span></div>
-	<div>FRI &amp; SAT <span class="float--right font--bold">{{hours.fri_open}} - {{hours.fri_close}}</span></div>
-	{% if hours.other_times != null %}
-		{% for time in hours.other_times  %}
-			<span class=" font--italic">
-			<span class="day">{{time.day|date("M d")}}</span>
-			<span class="text--right">{{time.text}}</span>
+	{# <div>SUN - THU <span class="float--right font--bold">{{hours.sun_open}} - {{hours.sun_close}}</span></div> #}
+	{# <div>FRI &amp; SAT <span class="float--right font--bold">{{hours.fri_open}} - {{hours.fri_close}}</span></div> #}
+	{% if hours != null %}
+		{% for hours in hours  %}
+
+			<strong class="day">{{hours.day}}</strong>
+			<span class="text--right float--right">{{hours.text}}</span><br>
 		</span>
 		{% endfor %}
 	{% endif %}

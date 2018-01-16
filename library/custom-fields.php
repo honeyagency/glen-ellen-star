@@ -15,22 +15,15 @@ function prepareSidebarPageFields()
 function prepareRestaurantHours()
 {
 
-    if (have_rows('field_578d61ba4d0b3', 'option')) {
-        while (have_rows('field_578d61ba4d0b3', 'option')) {
+    if (have_rows('field_5a5d4fcead944', 'option')) {
+        while (have_rows('field_5a5d4fcead944', 'option')) {
             the_row();
-            $other_times[] = array(
-                'day'  => get_sub_field('field_578d62034d0b5', 'option'),
-                'text' => get_sub_field('field_578d62154d0b6', 'option'),
+            $hours[] = array(
+                'day'  => get_sub_field('field_5a5d4fe1ad945', 'option'),
+                'text' => get_sub_field('field_5a5d4ff3ad946', 'option'),
             );
         }
     }
-    $hours = array(
-        'sun_open'    => get_field('field_578d61354d0af', 'option'),
-        'sun_close'   => get_field('field_578d61604d0b0', 'option'),
-        'fri_open'    => get_field('field_578d616a4d0b1', 'option'),
-        'fri_close'   => get_field('field_578d61a84d0b2', 'option'),
-        'other_times' => $other_times,
-    );
 
     return $hours;
 }

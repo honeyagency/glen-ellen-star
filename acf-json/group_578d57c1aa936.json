@@ -166,7 +166,8 @@
             "default_value": "",
             "tabs": "all",
             "toolbar": "full",
-            "media_upload": 1
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_578d585b10b3a",
@@ -185,68 +186,63 @@
             "endpoint": 0
         },
         {
-            "key": "field_578d61354d0af",
-            "label": "Sunday - Thursday Open",
-            "name": "sunday_through_thursday_open",
-            "type": "time_picker",
+            "key": "field_5a5d4fcead944",
+            "label": "Hours",
+            "name": "footer_options_hours",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 50,
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "display_format": "g:i a",
-            "return_format": "g:i a"
-        },
-        {
-            "key": "field_578d61604d0b0",
-            "label": "Sunday - Thursday Close",
-            "name": "sunday_through_thrusday_close",
-            "type": "time_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 50,
-                "class": "",
-                "id": ""
-            },
-            "display_format": "g:i a",
-            "return_format": "g:i a"
-        },
-        {
-            "key": "field_578d616a4d0b1",
-            "label": "Friday & Saturday Open",
-            "name": "friday_and_saturday_open",
-            "type": "time_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 50,
-                "class": "",
-                "id": ""
-            },
-            "display_format": "g:i a",
-            "return_format": "g:i a"
-        },
-        {
-            "key": "field_578d61a84d0b2",
-            "label": "Friday & Saturday Close",
-            "name": "friday_and_saturday_close",
-            "type": "time_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 50,
-                "class": "",
-                "id": ""
-            },
-            "display_format": "g:i a",
-            "return_format": "g:i a"
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5a5d4fe1ad945",
+                    "label": "Day(s)",
+                    "name": "footer_hours_days",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a5d4ff3ad946",
+                    "label": "Times Open",
+                    "name": "time_open",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
         },
         {
             "key": "field_578e6b8a60efe",
@@ -364,5 +360,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1475180295
+    "modified": 1516064790
 }
