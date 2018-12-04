@@ -2,13 +2,13 @@ body {
     font-family: $body-font-family;
     line-height: 1.6;
     font-size: $base-font-size;
-    font-weight: 100;
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
 
     @include media(max-width $screen-sm-max) {
         font-size: $base-font-size * 0.9;
     }
-
+font-kerning:normal;
 
     color: $base-font-color;
 }

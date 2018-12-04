@@ -1,30 +1,26 @@
 {% block html_head_container %}
-
-{% include 'html-header.twig' %}
+	{% include 'html-header.twig' %}
 	{% block head %}
 	{% endblock %}
-	</head>
+</head>
 {% endblock %}
+<body class="{{body_class}} bg--cream" data-template="base.twig">
 
-	<body class="{{body_class}} bg--cream" data-template="base.twig">
-		
 {% include 'components/header.twig' %}
-
 {% if post.id == '68' %}<div id="stopthis">x</div>
 <div class="videowrap">
 	<div id="player"></div></div>{% endif %}
-		<main id="main-{{post.ID}}" role="main" class="{{post.post_name}}" {% if post.ID == 68 %}style="background-image:url('{{home.image}}')"{% endif %}>
-			{% if title %}<h1>{{title}}</h1>{% endif %}
-				{% block content %}
-					Sorry, no content
-				{% endblock %}
-				
-		</main>
-		{% block footer %}
-			
-				{% include 'footer.twig' %}
-
-		{% endblock %}
-
-	</body>
+	<main id="main-{{post.ID}}" role="main" class="{{post.post_name}}" {% if post.ID == 68 %}style="background-image:url('{{home.image}}')"{% endif %}>
+	{% if title %}<h1>{{title}}</h1>{% endif %}
+	{% block content %}
+		Sorry, no content
+	{% endblock %}
+	
+</main>
+{% block footer %}
+	
+	{% include 'footer.twig' %}
+{% endblock %}
+<script src="https://widgets.resy.com/embed.js"></script>
+</body>
 </html>

@@ -6,7 +6,7 @@
     text-decoration: none;
 
     a {
-        font-weight: $button-weight;
+        // font-weight: 400;
     }
 
     &.center {
@@ -16,6 +16,8 @@
 
     &.nav-item, &.home--cta {
         font-family: $small-headings;
-        font-weight: $button-weight;
+
+        // font-weight: $button-weight;
+   
     }
 }

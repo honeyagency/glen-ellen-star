@@ -26,10 +26,22 @@ remove_action('admin_print_styles', 'print_emoji_styles');
 
 // Getting rid of WP Default jquery and adding from google
 if (!is_admin()) add_action("wp_enqueue_scripts", "jquery_enqueue", 11);
-function jquery_enqueue() {
+
+function jquery_enqueue()
+{
     wp_dequeue_script('jquery');
     wp_deregister_script('jquery');
-    wp_register_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", false, null);
+    wp_register_script('jquery',  get_template_directory_uri() . '/app/jquery-1.9.1.min.js', false, null);
+}
+
+function localInstall()
+{
+
+    if (strpos($_SERVER["HTTP_HOST"], 'test') !== false) {
+        $reloadScript = 'http://localhost:35729/livereload.js';
+        wp_register_script('livereload', $reloadScript, null, false, true);
+        wp_enqueue_script('livereload');
+    }
 }
 
 // Enqueuing all of our scripts and styles
