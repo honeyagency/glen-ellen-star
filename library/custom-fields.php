@@ -66,8 +66,7 @@ function prepareHomepageFields()
     );
     $section = array(
         'text'      => get_field('field_578eabf3676c8'),
-        'cta_text'  => get_field('field_578eabf7676c9'),
-        'cta_url'   => get_field('field_578eac12676ca'),
+        'link'      => get_field('field_5e715772025fb'),
         'messaging' => get_field('field_59e00080760d4'),
         'video'     => $video,
         'image'     => $image,

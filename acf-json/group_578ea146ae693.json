@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
+            "placement": "left",
             "endpoint": 0
         },
         {
@@ -40,10 +40,10 @@
             "disabled": 0
         },
         {
-            "key": "field_578eabf7676c9",
-            "label": "Call To Action Text",
-            "name": "call_to_action_text",
-            "type": "text",
+            "key": "field_5e715772025fb",
+            "label": "Homepage Link",
+            "name": "homepage_link",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -52,29 +52,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_578eac12676ca",
-            "label": "Call To Action URL",
-            "name": "call_to_action_url",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
+            "return_format": "array"
         },
         {
             "key": "field_59e00080760d4",
@@ -108,7 +86,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
+            "placement": "left",
             "endpoint": 0
         },
         {
@@ -205,7 +183,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
+            "placement": "left",
             "endpoint": 0
         },
         {
@@ -291,5 +269,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1507852550
+    "modified": 1584486282
 }
