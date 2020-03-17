@@ -1,48 +1,42 @@
-@import
-  '_07-vendors/bourbon/bourbon',
-  '_07-vendors/neat/neat';
+@import "_07-vendors/bourbon/bourbon";
+@import "_07-vendors/neat/neat";
 
-@import
-  '_06-utils/color-palette',
-  '_06-utils/variables',
-  '_06-utils/mixins';
+@import "_06-utils/color-palette";
+@import "_06-utils/variables";
+@import "_06-utils/mixins";
 
-@import
-  '_01-base/reset',
-  '_01-base/typography',
-  '_01-base/base',
-  '_01-base/forms';
+@import "_01-base/reset";
+@import "_01-base/typography";
+@import "_01-base/fonts";
+@import "_01-base/base";
+@import "_01-base/forms";
 
-@import
-  '_03-layout/navigation',
-  '_03-layout/header',
-  '_03-layout/footer',
-  '_03-layout/forms',
-  '_03-layout/sidebar-page';
+@import "_03-layout/navigation";
+@import "_03-layout/header";
+@import "_03-layout/footer";
+@import "_03-layout/forms";
+@import "_03-layout/sidebar-page";
 
-@import
-  
-  '_02-components/buttons',
-  '_02-components/border',
-  '_02-components/bg-color',
-  '_02-components/block--home-center',
-  '_02-components/block--social-icons',
-  '_02-components/block--sidebar-image',
-  '_02-components/color',
-  '_02-components/display',
-  '_02-components/icons',
-  '_02-components/section--aside',
-  '_02-components/section--footer-buttons',
-  '_02-components/section--footer-contact',
-  '_02-components/section--footer-hours',
-  '_02-components/section--homepage-video',  
-  '_02-components/section--home-youtube',
-  '_02-components/section--menus',  
-  '_02-components/spacing',
-  '_02-components/trigger--nav-mobile',
-  '_02-components/type-utils';
+@import "_02-components/buttons";
+@import "_02-components/border";
+@import "_02-components/bg-color";
+@import "_02-components/block--home-center";
+@import "_02-components/block--social-icons";
+@import "_02-components/block--sidebar-image";
+@import "_02-components/color";
+@import "_02-components/display";
+@import "_02-components/icons";
+@import "_02-components/section--aside";
+@import "_02-components/section--footer-buttons";
+@import "_02-components/section--footer-contact";
+@import "_02-components/section--footer-hours";
+@import "_02-components/section--homepage-video";
+@import "_02-components/section--home-youtube";
+@import "_02-components/section--menus";
+@import "_02-components/spacing";
+@import "_02-components/trigger--nav-mobile";
+@import "_02-components/type-utils";
 
-@import
-  '_04-pages/home',
-  '_04-pages/press',
-  '_04-pages/menus';
+@import "_04-pages/home";
+@import "_04-pages/press";
+@import "_04-pages/menus";

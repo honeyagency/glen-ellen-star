@@ -1,7 +1,7 @@
 
 <div class="block--home-center text--center">
 	{% if home.text != null %}<h1 class="color--white home--title">{{home.text}}</h1>{% endif %}
-	<a class="button color--white bg--red border--red home--cta rsrv-link" title="{{home.cta_text}}" href="{{home.cta_url}}">{{home.cta_text}}</a>
+	<a class="button color--white bg--red border--red home--cta" title="{{home.cta_text}}" href="{{home.cta_url}}">{{home.cta_text}}</a>
 	{% if home.messaging %}<div class="messaging bg--white color--black spacing--horiz-1 spacing--vert-1 flex--grid-half">{{home.messaging}}</div>{% endif %}
 </div>
 
