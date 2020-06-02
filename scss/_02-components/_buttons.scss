@@ -7,6 +7,7 @@
 
     a {
         // font-weight: 400;
+   
     }
 
     &.center {
@@ -19,5 +20,43 @@
 
         // font-weight: $button-weight;
    
+    }
+
+    transition: background-color 0.2s $base-animation;
+
+    &.bg--red {
+        &:hover, &:focus {
+            transition: background-color 0.2s $base-animation;
+            background-color: darken(map-get($red, main), 10%);
+        }
+
+        &:active {
+            transition: background-color 0.2s $base-animation;
+            background-color: darken(map-get($red, main), 15%);
+        }
+    }
+
+    &.bg--black {
+        &:hover, &:focus {
+            transition: background-color 0.2s $base-animation;
+            background-color: darken(map-get($black, main), 10%);
+        }
+
+        &:active {
+            transition: background-color 0.2s $base-animation;
+            background-color: darken(map-get($black, main), 15%);
+        }
+    }
+
+    &.bg--cream-dark {
+        &:hover, &:focus {
+            transition: background-color 0.2s $base-animation;
+            background-color: darken(map-get($cream, dark), 10%);
+        }
+
+        &:active {
+            transition: background-color 0.2s $base-animation;
+            background-color: darken(map-get($cream, dark), 15%);
+        }
     }
 }

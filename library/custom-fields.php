@@ -64,9 +64,15 @@ function prepareHomepageFields()
         'mp4'  => get_field('field_578ea18938013'),
         'webm' => get_field('field_578ea1a038014'),
     );
+    $reserve = array(
+        'text'      => get_field('field_5ed6d5c0db203'),
+        'classname' => get_field('field_5ed6d5c9db204'),
+        'url'       => get_field('field_5ed6d5d1db205'),
+    );
     $section = array(
         'text'      => get_field('field_578eabf3676c8'),
         'link'      => get_field('field_5e715772025fb'),
+        'reserve'   => $reserve,
         'messaging' => get_field('field_59e00080760d4'),
         'video'     => $video,
         'image'     => $image,

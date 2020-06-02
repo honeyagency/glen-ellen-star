@@ -2,6 +2,9 @@
 <div class="block--home-center text--center">
 	{% if home.text != null %}<h1 class="color--white home--title">{{home.text}}</h1>{% endif %}
 	{% if home.link.url %}<a href="{{home.link.url}}" target="{{home.link.target}}" title="{{home.link.title}}" class="button color--white bg--red border--red home--cta">{{home.link.title}}</a>{% endif %}
+		{% if home.reserve.text %}
+			<a href="{{home.reserve.url}}" class="button color--white bg--black border--red home--cta {{home.reserve.classname}}">{{home.reserve.text}}</a>
+		{% endif %}
 	{% if home.messaging %}<div class="messaging bg--white color--black spacing--horiz-1 spacing--vert-1 flex--grid-half">{{home.messaging}}</div>{% endif %}
 </div>
 

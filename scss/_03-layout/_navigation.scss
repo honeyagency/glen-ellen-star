@@ -2,7 +2,8 @@ nav {
     // Hidden, will slide in when you add ".open"
     width: 75%;
     z-index: 99;
-    justify-content: space-between;
+
+    // justify-content: space-between;
 
     // specific for mobile (needs to be overwritten)
 
@@ -29,6 +30,12 @@ nav {
         list-style-type: none;
         text-align: center;
 
+        &.color--black {
+            a {
+                color: map-get($black, main) !important;
+            }
+        }
+
         a {
             letter-spacing: 1.2px;
             font-size: 1rem !important;
@@ -48,6 +55,7 @@ nav {
         &.not-home {
             position: relative;
             flex-direction: row !important;
+            justify-content: space-between;
             padding-top: 0;
             right: 0;
             background-color: transparent;
@@ -85,8 +93,13 @@ nav {
 
 header.home {
     nav {
+        justify-content: flex-end;
+
         li {
+            margin: auto;
+
             &.button {
+                margin: unset;
                 padding: 2em;
             }
         }

@@ -6,6 +6,10 @@
     background-color: map-get($cream, main);
 }
 
+.bg--cream-dark {
+    background-color: map-get($cream, dark);
+}
+
 .bg--red {
     background-color: map-get($red, main);
 }
@@ -49,6 +53,7 @@
         }
     }
 }
-.bg--white{
+
+.bg--white {
     background-color: white;
 }

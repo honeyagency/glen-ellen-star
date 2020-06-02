@@ -1,15 +1,19 @@
-.color--white{
-	color:white;
+.color--white {
+    color: white;
 }
-.color--cream{
-	color:map-get($cream, main);
+
+.color--cream {
+    color: map-get($cream, main);
 }
-.color--cream-dark{
-	color:map-get($cream, dark);
+
+.color--cream-dark {
+    color: map-get($cream, dark);
 }
-.color--red{
-	color: map-get($red, main);
+
+.color--red {
+    color: map-get($red, main);
 }
+
 .color--black {
     color: map-get($black, main);
 }
